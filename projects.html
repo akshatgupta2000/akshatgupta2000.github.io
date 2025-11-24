@@ -1,58 +1,81 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Projects — Akshat Gupta</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
+<body class="theme-b">
+  <header class="site-header">
+    <nav class="topnav">
+      <a class="navlink" href="about.html">About</a>
+      <a class="navlink" href="projects.html" aria-current="page">Projects</a>
+      <a class="navlink" href="resume.html">Resume</a>
+    </nav>
+  </header>
 
-<body>
-<nav class="navbar">
-  <a href="about.html" class="nav-link">About</a>
-  <a href="projects.html" class="nav-link active">Projects</a>
-  <a href="resume.html" class="nav-link">Resume</a>
-</nav>
+  <main class="container">
+    <h1 class="page-title">Projects & Repositories</h1>
 
-<section class="project-container">
+    <section class="projects-grid">
+      <!-- Card for Corporate Analysis -->
+      <article class="project-card">
+        <div class="project-head">
+          <svg width="40" height="40" viewBox="0 0 24 24"><path stroke="#6FB3FF" stroke-width="1.6" d="M3 21h18M7 18V8m5 10V4m5 14v-6"/></svg>
+          <div>
+            <h3>Corporate Analysis (2020–2030)</h3>
+            <p class="muted">Detailed sector thesis, company write-ups, valuation frameworks (README in repo).</p>
+          </div>
+        </div>
+        <div class="project-meta">
+          <div><strong>Status:</strong> SSRN — Under review</div>
+          <div><strong>Started:</strong> June 2025</div>
+        </div>
+        <div class="project-actions">
+          <a href="https://github.com/akshatgupta2000/Cross-Market-Corporate-Analysis-2020-2030" target="_blank" class="btn">Open Repo</a>
+          <a href="assets/files/Research Thesis.pdf" target="_blank" class="btn outline">Open Thesis (PDF)</a>
+        </div>
+        <div class="project-images">
+          <img src="assets/images/FSI-India.png" alt="">
+        </div>
+      </article>
 
-  <h1 class="page-title">Projects</h1>
+      <!-- Card for Financial Models -->
+      <article class="project-card">
+        <div class="project-head">
+          <svg width="40" height="40" viewBox="0 0 24 24"><path stroke="#6FB3FF" stroke-width="1.6" d="M3 6h18v12H3zM6 9h12M6 12h12M6 15h7"/></svg>
+          <div>
+            <h3>Financial Models (2020–2030)</h3>
+            <p class="muted">Excel workbooks: ROCE-PE mapping, Heatmaps, RAPI & CAS sector models.</p>
+          </div>
+        </div>
+        <div class="project-meta">
+          <div><strong>Files:</strong> Financial Models (Market Analysis).xlsx; Sector Analysis.xlsx</div>
+        </div>
+        <div class="project-actions">
+          <a href="https://github.com/akshatgupta2000/Cross-Market-Financial-Models-2020-2030" target="_blank" class="btn">Open Repo</a>
+        </div>
+        <div class="project-images">
+          <img src="assets/images/RAPI.png" alt="">
+          <img src="assets/images/Macroeconomic Cross-Sector CAS Heatmap-India.png" alt="">
+        </div>
+      </article>
+    </section>
 
-  <div class="card-grid">
+    <section class="gallery">
+      <h3 class="section-title">Key visuals (full gallery)</h3>
+      <div class="img-grid">
+        <img src="assets/images/FSI-India.png" alt="FSI India">
+        <img src="assets/images/FSI-United States.png" alt="FSI US">
+        <img src="assets/images/Macroeconomic Cross-Sector CAS Heatmap-India.png" alt="CAS India">
+        <img src="assets/images/Macroeconomic Cross-Sector CAS Heatmap-US.png" alt="CAS US">
+        <img src="assets/images/RAPI.png" alt="RAPI">
+      </div>
+    </section>
 
-    <!-- Corporate Analysis Card -->
-    <div class="project-card">
-      <svg width="40" height="40" stroke="#00BFFF" fill="none" stroke-width="2" viewBox="0 0 24 24">
-        <path d="M3 3h18v4H3zM3 17h18v4H3zM3 10h18v4H3z"/>
-      </svg>
-      <h3>Corporate Analysis</h3>
-      <p>Cross-market corporate financial analysis (India & US).</p>
-      <a class="btn" href="https://github.com/akshatgupta2000/Cross-Market-Corporate-Analysis-2020-2030" target="_blank">View Repository</a>
-    </div>
+  </main>
 
-    <!-- Financial Models Card -->
-    <div class="project-card">
-      <svg width="40" height="40" stroke="#00BFFF" fill="none" stroke-width="2" viewBox="0 0 24 24">
-        <path d="M4 20V10m4 10V4m4 16v-6m4 6v-8m4 8V8"/>
-      </svg>
-      <h3>Financial Models</h3>
-      <p>Excel-based valuation models, heatmaps, CAS, and RAPI frameworks.</p>
-      <a class="btn" href="https://github.com/akshatgupta2000/Cross-Market-Financial-Models-2020-2030" target="_blank">View Repository</a>
-    </div>
-
-  </div>
-
-  <h2 class="section-title">Research Thesis</h2>
-
-  <div class="thesis-card">
-    <h3>Decoding India & U.S. Corporate Landscape — 2030 Outlook</h3>
-    <p><strong>Status:</strong> Under SSRN Review</p>
-    <p><strong>Timeline:</strong> June 2025 — October 2025</p>
-
-    <a class="btn" href="Research Thesis.pdf" target="_blank">View Thesis PDF</a>
-  </div>
-
-</section>
-
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
