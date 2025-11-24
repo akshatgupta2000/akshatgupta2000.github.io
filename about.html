@@ -1,67 +1,135 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>About — Akshat Gupta</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
+<body class="theme-b">
+  <header class="site-header">
+    <nav class="topnav">
+      <a class="navlink" href="about.html" aria-current="page">About</a>
+      <a class="navlink" href="projects.html">Projects</a>
+      <a class="navlink" href="resume.html">Resume</a>
+    </nav>
+  </header>
 
-<body>
+  <main class="container">
+    <section class="profile-card">
+      <div class="profile-left">
+        <div class="avatar-wrap">
+          <!-- user photo -->
+          <img src="assets/images/My-Photo.png" alt="Akshat Gupta" class="avatar">
+        </div>
+        <h1 class="name">Akshat Gupta</h1>
+        <p class="role">Independent Researcher — Financial Analysis & Modelling</p>
 
-<nav class="navbar">
-  <a href="about.html" class="nav-link active">About</a>
-  <a href="projects.html" class="nav-link">Projects</a>
-  <a href="resume.html" class="nav-link">Resume</a>
-</nav>
+        <div class="contact-row">
+          <!-- GitHub SVG icon + link -->
+          <a aria-label="GitHub" class="icon-btn" href="https://github.com/akshatgupta2000" target="_blank" rel="noreferrer">
+            <!-- GitHub SVG (inline) -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path fill="#A8D0F0" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.6-1.6-1.4-2-1.4-2-1.2-.8.1-.8.1-.8 1.3.1 2 1.4 2 1.4 1.2 2 3.2 1.4 4 .9.1-.8.4-1.4.7-1.8-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C16.8 4 17.8 4.2 17.8 4.2c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.4c0 .3.2.7.8.6A12 12 0 0 0 12 .5z" />
+            </svg>
+          </a>
 
-<section class="about-container">
+          <!-- LinkedIn -->
+          <a aria-label="LinkedIn" class="icon-btn" href="https://www.linkedin.com/in/akshat-gupta-2100ag" target="_blank" rel="noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path fill="#A8D0F0" d="M4.98 3.5C3.88 3.5 3 4.38 3 5.5s.88 2 1.98 2H5c1.1 0 2-.9 2-2s-.9-2-2-2zM3 9.5h4v11H3v-11zm7 0h3.8v1.6h.1c.5-.8 1.8-1.6 3.6-1.6 3.8 0 4.5 2.4 4.5 5.6v6.4h-4v-5.7c0-1.4 0-3.1-2-3.1-2 0-2.3 1.6-2.3 3v6h-4v-11z"/>
+            </svg>
+          </a>
 
-  <div class="profile-card">
-    <img src="My-Photo.png" class="profile-photo" alt="Akshat Gupta">
+          <!-- Email (no direct email text in About header; clicking opens mailto) -->
+          <a aria-label="Email" class="icon-btn" href="mailto:akshatgupta13427@gmail.com">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path fill="#A8D0F0" d="M2 6.5A2.5 2.5 0 0 1 4.5 4h15A2.5 2.5 0 0 1 22 6.5v11A2.5 2.5 0 0 1 19.5 20h-15A2.5 2.5 0 0 1 2 17.5v-11zM4.5 6L12 11l7.5-5H4.5z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
 
-    <h1 class="name">Akshat Gupta</h1>
-    <p class="role">Independent Researcher | Financial Analysis & Modelling</p>
+      <div class="profile-right">
+        <h2 class="section-title">Welcome</h2>
 
-    <div class="social-icons">
+        <div class="card">
+          <h3 class="card-title">About me</h3>
+          <p class="lead">
+            I am an independent financial researcher focused on financial statement analysis, valuation modelling, and sector-level performance assessment.
+            My work emphasises clear, evidence-based analysis and practical forecasting using Excel models and Power BI dashboards. I completed an internship project titled
+            <strong>"Study of Financial Statements using Ratio Analysis"</strong>, which deepened my expertise on financial statement interpretation and company-level ratio diagnostics.
+          </p>
 
-      <!-- LinkedIn -->
-      <a href="https://linkedin.com/in/akshat-gupta-2100ag" target="_blank" class="icon-link">
-        <svg width="28" height="28" fill="#00BFFF" viewBox="0 0 24 24">
-          <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.1c.5-1 1.9-2.2 4-2.2 4.2 0 5 2.8 5 6.5V24h-4v-8.2c0-2-.04-4.6-2.8-4.6-2.8 0-3.2 2.2-3.2 4.4V24h-4V8z"/>
-        </svg>
-      </a>
+          <p>
+            I prepare concise analytical write-ups, sector scorecards, and reproducible Excel workbooks that support investment decision-making and communication with stakeholders.
+          </p>
 
-      <!-- GitHub -->
-      <a href="https://github.com/akshatgupta2000" target="_blank" class="icon-link">
-        <svg width="28" height="28" fill="#00BFFF" viewBox="0 0 24 24">
-          <path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6a3.1 3.1 0 0 0-1.4-1.7c-1.1-.7.1-.7.1-.7a2.5 2.5 0 0 1 1.8 1.2 2.6 2.6 0 0 0 3.5 1 2.6 2.6 0 0 1 .8-1.6c-2.7-.3-5.5-1.3-5.5-6a4.7 4.7 0 0 1 1.3-3.3 4.4 4.4 0 0 1 .1-3.2s1-.3 3.4 1.3a11.3 11.3 0 0 1 6.2 0c2.4-1.6 3.4-1.3 3.4-1.3a4.4 4.4 0 0 1 .1 3.2 4.7 4.7 0 0 1 1.3 3.3c0 4.7-2.8 5.7-5.5 6a3 3 0 0 1 .9 2.3v3.4c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/>
-        </svg>
-      </a>
-    </div>
-  </div>
+          <div class="meta-row">
+            <div class="meta">
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#6FB3FF" d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+              <strong>Status:</strong> SSRN — Under review
+            </div>
 
-  <div class="bio-section">
-    <h2>About Me</h2>
-    <p>
-      I am an independent financial researcher with a strong interest in fundamental analysis, valuation modelling,
-      cross-market comparison, and sector-level financial performance assessment. My work focuses on financial statements
-      analysis, ratio interpretation, and long-term forecasting using structured Excel models.
-    </p>
+            <div class="meta">
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="#6FB3FF" d="M12 2l4 4h-3v6h-2V6H8l4-4zM5 20h14v2H5z"/></svg>
+              <strong>Started:</strong> June 2025
+            </div>
+          </div>
+        </div>
 
-    <p>
-      I enjoy working with financial data, identifying trends in corporate performance, and preparing clear, analytical
-      insights that support decision-making. I am also skilled in building dashboards, valuation frameworks, and
-      sector-specific financial models.
-    </p>
+        <div class="card small-grid">
+          <a class="repo-card" href="https://github.com/akshatgupta2000/Cross-Market-Corporate-Analysis-2020-2030" target="_blank" rel="noreferrer">
+            <!-- analysis icon (outline) -->
+            <svg class="repo-icon" width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path stroke="#6FB3FF" stroke-width="1.6" d="M3 21h18M7 18V8m5 10V4m5 14v-6"/>
+              <rect x="2" y="2" width="20" height="20" rx="3" stroke="#2e3a40" stroke-width="0.6" fill="rgba(255,255,255,0.02)"/>
+            </svg>
+            <div>
+              <div class="repo-title">Corporate Analysis (2020–2030)</div>
+              <div class="repo-desc">Thesis & sector write-ups (detailed). Readme and repo links.</div>
+            </div>
+          </a>
 
-    <p>
-      My goal is to continue exploring financial markets, improving my modelling capabilities, and contributing meaningful
-      research to the finance and investment domain.
-    </p>
-  </div>
+          <a class="repo-card" href="https://github.com/akshatgupta2000/Cross-Market-Financial-Models-2020-2030" target="_blank" rel="noreferrer">
+            <!-- models icon (outline) -->
+            <svg class="repo-icon" width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path stroke="#6FB3FF" stroke-width="1.6" d="M3 6h18v12H3zM6 9h12M6 12h12M6 15h7"/>
+              <rect x="2" y="2" width="20" height="20" rx="3" stroke="#2e3a40" stroke-width="0.6" fill="rgba(255,255,255,0.02)"/>
+            </svg>
+            <div>
+              <div class="repo-title">Financial Models (2020–2030)</div>
+              <div class="repo-desc">Excel workbooks: ROCE-PE, Heatmaps, RAPI, CAS, sector dashboards.</div>
+            </div>
+          </a>
 
-</section>
+          <a class="file-card" href="assets/files/Research Thesis.pdf" target="_blank" rel="noreferrer">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none">
+              <path d="M6 2h7l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z" fill="rgba(255,255,255,0.03)"/>
+              <path d="M13 2v6h6" stroke="#6FB3FF" stroke-width="1.4" fill="none"/>
+            </svg>
+            <div>
+              <div class="repo-title">Research Thesis (PDF)</div>
+              <div class="repo-desc">Download the thesis (summary & full PDF).</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
 
+    <section class="gallery">
+      <h3 class="section-title">Key visuals</h3>
+      <div class="img-grid">
+        <img src="assets/images/FSI-India.png" alt="FSI India">
+        <img src="assets/images/FSI-United States.png" alt="FSI US">
+        <img src="assets/images/Macroeconomic Cross-Sector CAS Heatmap-India.png" alt="CAS India">
+        <img src="assets/images/Macroeconomic Cross-Sector CAS Heatmap-US.png" alt="CAS US">
+        <img src="assets/images/RAPI.png" alt="RAPI">
+      </div>
+      <p class="hint">Click images in the repo to view; direct click opens file in GitHub Pages if file exists.</p>
+    </section>
+  </main>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
