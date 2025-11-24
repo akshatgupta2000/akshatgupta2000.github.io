@@ -1,71 +1,98 @@
 :root{
-  --bg:#121214;          /* dark background */
-  --card:#1E1E20;        /* lighter card */
-  --muted:#9CA3AF;       /* muted text */
-  --text:#FFFFFF;        /* main text */
-  --accent:#00BFFF;      /* blue accent */
-  --accent-ink:#0ea5ff;
-  --radius:10px;
-  --maxw:1000px;
-  font-size:16px;
-  font-family: "Inter", "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --bg:#0F1115;         /* page background */
+  --card:#17181A;       /* card background */
+  --text:#FFFFFF;
+  --muted:#B6BDC3;
+  --accent:#1E90FF;     /* blue accent (swapable) */
+  --icon-size:40px;
 }
 
-*{box-sizing:border-box}
-html,body{height:100%;background:var(--bg);color:var(--text);margin:0;padding:0;-webkit-font-smoothing:antialiased}
-.container{max-width:var(--maxw);margin:36px auto;padding:28px}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:28px}
-.brand{display:flex;align-items:center;gap:12px}
-.brand h1{font-size:1.4rem;margin:0}
-.brand p{margin:0;color:var(--muted);font-size:.9rem}
-.nav-links{display:flex;gap:12px}
-.nav-link{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600}
-.nav-link.active,.nav-link:hover{color:var(--accent);background:transparent;border:1px solid rgba(255,255,255,0.03)}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, Arial, sans-serif;
+  margin:0;
+  padding:0 24px;
+}
 
-.header-row{display:flex;gap:24px;align-items:center}
-.avatar{width:96px;height:96px;border-radius:12px;overflow:hidden;background:linear-gradient(180deg,#222,#111);border:1px solid rgba(255,255,255,0.03)}
-.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+/* card container */
+.card {
+  background: var(--card);
+  border-radius:12px;
+  padding:18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+  margin: 16px 0;
+}
 
-/* Card */
-.card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:0 6px 18px rgba(0,0,0,0.5);border:1px solid rgba(255,255,255,0.02)}
-.grid2{display:grid;grid-template-columns:1fr 320px;gap:20px}
-@media(max-width:880px){.grid2{grid-template-columns:1fr}.nav{flex-direction:column;align-items:flex-start}}
+/* small icon box used next to titles or buttons */
+.icon-box {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  vertical-align:middle;
+  margin-right:12px;
+}
 
-/* About page */
-.about-bio{line-height:1.6;color: #E6EEF8}
-.contact-icons{display:flex;gap:10px;margin-top:12px}
-.icon-btn{width:44px;height:44px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;background:transparent;border:1px solid rgba(255,255,255,0.03)}
-.icon-btn svg{width:20px;height:20px;fill:none;stroke:var(--text);stroke-width:1.6}
-.small{font-size:0.9rem;color:var(--muted);margin-top:8px}
+/* inline SVG styling */
+.icon-box svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--accent);
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 
-/* Projects */
-.project-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:14px}
-.project-card{display:flex;gap:12px;align-items:flex-start;padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
-.p-icon{width:56px;height:56px;border-radius:10px;display:flex;align-items:center;justify-content:center;border:1px dashed rgba(255,255,255,0.03)}
-.p-title{font-weight:700;margin:0;color:#EAF6FF}
-.p-desc{margin:6px 0 0;color:var(--muted);font-size:.95rem}
+/* for filled icons (like GitHub) */
+.icon-box svg.filled { fill: var(--accent); stroke: none; }
 
-/* Key visual thumbnails */
-.thumbs{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
-.thumb{width:220px;height:140px;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,0.03);background:#0f1720;display:flex;align-items:center;justify-content:center}
-.thumb img{width:100%;height:100%;object-fit:cover}
+/* avatar */
+.avatar {
+  width:110px;
+  height:110px;
+  border-radius:10px;
+  object-fit:cover;
+  display:block;
+}
 
-/* Buttons */
-.btn{display:inline-block;padding:8px 14px;border-radius:8px;background:transparent;border:1px solid var(--accent);color:var(--accent);text-decoration:none;font-weight:700}
-.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted)}
+/* link icons row */
+.contact-icons a {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:var(--text);
+  text-decoration:none;
+  margin-right:12px;
+}
 
-/* Resume */
-.resume-grid{display:grid;grid-template-columns:1fr 320px;gap:20px}
-.timeline{border-left:2px solid rgba(255,255,255,0.03);padding-left:16px;margin-top:8px}
-.timeline-item{margin-bottom:18px}
-.timeline-item h4{margin:0;color:#EAF6FF}
-.timeline-item span{color:var(--muted);font-size:.9rem}
+/* repo card small icon */
+.repo-icon {
+  width:34px;height:34px;border-radius:8px;display:inline-grid;
+  place-items:center;margin-right:10px;
+  border:1px solid rgba(255,255,255,0.05);
+  background:transparent;
+}
 
-/* Skills bars */
-.skill {margin-bottom:14px}
-.skill .label{display:flex;justify-content:space-between;font-weight:600;color:#EAF6FF}
-.progress{height:10px;background:rgba(255,255,255,0.05);border-radius:999px;margin-top:8px;overflow:hidden}
-.progress > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-ink));border-radius:999px}
+.small-title { font-weight:600; color:var(--text); }
+.muted { color:var(--muted); font-size:0.95rem; }
 
-/* small footer */
-.footer{margin-top:36px;text-align:center;color:var(--muted);font-size:.9rem;padding:12px 0}
+/* percentage bar */
+.skill {
+  margin:10px 0;
+}
+.skill .bar-bg {
+  height:12px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 999px;
+  overflow:hidden;
+}
+.skill .bar-fill {
+  height:100%;
+  background: linear-gradient(90deg, var(--accent), #3ab1ff);
+  width:0%;
+  border-radius:999px;
+}
+.skill .label { display:flex; justify-content:space-between; font-size:0.9rem; margin-bottom:6px; color:var(--muted); }
