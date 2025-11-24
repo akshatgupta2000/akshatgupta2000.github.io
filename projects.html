@@ -1,88 +1,94 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Projects — Akshat Gupta</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Akshat Gupta — Projects</title>
   <link rel="stylesheet" href="ASSETS/css/style.css">
 </head>
-<body>
-  <div class="container">
-    <nav class="nav">
-      <div class="brand"><h1>Akshat Gupta</h1><p>Investment Research • Financial Modelling</p></div>
-      <div class="nav-links">
-        <a class="nav-link" href="about.html">About</a>
-        <a class="nav-link active" href="projects.html">Projects</a>
-        <a class="nav-link" href="resume.html">Resume</a>
-      </div>
-    </nav>
+<body class="theme-dark">
+  <nav class="topnav">
+    <a href="about.html" class="nav-link">About</a>
+    <a href="projects.html" class="nav-link active">Projects</a>
+    <a href="resume.html" class="nav-link">Resume</a>
+  </nav>
 
-    <div class="card">
-      <h2 style="margin:0;color:#EAF6FF">Projects & Repositories</h2>
-      <p class="small">A selection of code, models, and visual frameworks hosted on GitHub.</p>
+  <main class="container">
+    <h1 class="page-title">Projects & Research</h1>
 
-      <div class="project-list" style="margin-top:18px">
-        <!-- Repo: Corporate Analysis -->
-        <div class="project-card card">
-          <div class="p-icon" aria-hidden="true">
-            <!-- outlined analysis SVG -->
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="4" height="12" rx="1.2" stroke="currentColor" stroke-width="1.6"/><rect x="9" y="3" width="4" height="15" rx="1.2" stroke="currentColor" stroke-width="1.6"/><rect x="15" y="10" width="4" height="8" rx="1.2" stroke="currentColor" stroke-width="1.6"/></svg>
-          </div>
+    <section class="grid-two">
+      <!-- Repo Card: Corporate Analysis -->
+      <article class="card project-card">
+        <div class="card-head">
+          <!-- analysis outlined icon -->
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" class="card-icon"><path d="M3 3v18h18" stroke="#00A3FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 13l3-3 3 6 4-8" stroke="#00A3FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <div>
-            <h3 class="p-title">Corporate Analysis</h3>
-            <p class="p-desc">Sector-level fundamental models and structured research notes. View on GitHub (no direct downloads).</p>
-            <div style="margin-top:8px">
-              <a class="btn" href="https://github.com/akshatgupta2000/Cross-Market-Corporate-Analysis-2020-2030" target="_blank">View on GitHub</a>
-              <a class="btn ghost" style="margin-left:8px" href="#thesis">Thesis</a>
-            </div>
+            <h3>Corporate Analysis</h3>
+            <p class="muted">Sector-level reports for India & US (per sector files)</p>
           </div>
         </div>
 
-        <!-- Repo: Financial Models -->
-        <div class="project-card card">
-          <div class="p-icon">
-            <!-- outlined model SVG -->
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M3 6h18" stroke="currentColor" stroke-width="1.6"/><rect x="3" y="9" width="18" height="12" rx="1.2" stroke="currentColor" stroke-width="1.6"/></svg>
-          </div>
+        <p class="project-desc">A collection of sector-wise fundamental analyses and narrative research summarising valuation and capital efficiency trends.</p>
+
+        <!-- No downloadable Excel files here — only link to repo -->
+        <div class="project-links">
+          <a class="btn" href="https://github.com/akshatgupta2000/Cross-Market-Corporate-Analysis-2020-2030" target="_blank">Open Repo</a>
+        </div>
+      </article>
+
+      <!-- Repo Card: Financial Models -->
+      <article class="card project-card">
+        <div class="card-head">
+          <!-- model outlined icon -->
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" class="card-icon"><rect x="3" y="4" width="18" height="16" rx="2" stroke="#00A3FF" stroke-width="1.6"/><path d="M3 9h18" stroke="#00A3FF" stroke-width="1.6"/></svg>
           <div>
-            <h3 class="p-title">Financial Models</h3>
-            <p class="p-desc">Consolidated financial workbook with modeling sheets, heatmaps and visualization outputs. View on GitHub (models preview only).</p>
-            <div style="margin-top:8px">
-              <a class="btn" href="https://github.com/akshatgupta2000/Cross-Market-Financial-Models-2020-2030" target="_blank">View on GitHub</a>
-              <a class="btn ghost" style="margin-left:8px" href="#visuals">Key Visuals</a>
-            </div>
+            <h3>Financial Models</h3>
+            <p class="muted">ROCE-P/E, Scorecards, Heatmaps — combined workbook</p>
           </div>
         </div>
-      </div>
 
-      <!-- Key Visuals -->
-      <h3 style="margin-top:18px;color:#EAF6FF">Key Visuals</h3>
-      <div class="thumbs" id="visuals">
-        <!-- Use your images in assets/images/ -->
-        <div class="thumb"><img src="ASSETS/Images/FSI-India.png" alt="FSI India"></div>
-        <div class="thumb"><img src="ASSETS/Images/Fundamental and RAPI score Heatmaps (India).png" alt="Heatmap India"></div>
-        <div class="thumb"><img src="ASSETS/Images/Macroeconomic Cross-Sector CAS Heatmap-India.png" alt="CAS India"></div>
-        <div class="thumb"><img src="ASSETS/Images/FSI-United States.png" alt="FSI US"></div>
-        <div class="thumb"><img src="ASSETS/Images/Fundamental and RAPI score Heatmap (US).png" alt="Heatmap US"></div>
-        <div class="thumb"><img src="ASSETS/Images/Macroeconomic Cross-Sector CAS Heatmap-US.png" alt="CAS US"></div>
-      </div>
+        <p class="project-desc">Central Excel workbook containing comparative models and visual outputs used to build the thesis insights.</p>
 
-      <!-- Thesis -->
-      <div id="thesis" style="margin-top:18px">
-        <h3 style="color:#EAF6FF;margin:0">Research Thesis</h3>
-        <p class="small" style="margin:6px 0 12px">Decoding India and US’s Corporate Landscape: Cross-Sector Fundamentals and Outlook to 2030</p>
-        <div style="display:flex;gap:12px;align-items:center">
-          <a class="btn" href="/Research Thesis.pdf" target="_blank">View Thesis (PDF)</a>
-          <div style="color:var(--muted);font-size:.95rem">SSRN Status: <strong style="color:var(--accent)">Under Review</strong></div>
+        <div class="project-links">
+          <a class="btn" href="https://github.com/akshatgupta2000/Cross-Market-Financial-Models-2020-2030" target="_blank">Open Repo</a>
         </div>
+      </article>
+    </section>
 
-        <div style="margin-top:12px" class="small">
-          <strong>Timeline</strong>
-          <div style="margin-top:6px;color:var(--muted)">Project started: June 2025 • Final edits: Nov 2025</div>
-        </div>
+    <!-- Key Visuals gallery (images must be uploaded under ASSETS/images/) -->
+    <section class="card gallery">
+      <h2>Key Visuals</h2>
+      <div class="thumb-grid">
+        <figure class="thumb">
+          <img src="ASSETS/images/Fundamental and RAPI score Heatmaps (India).png" alt="Heatmap India">
+          <figcaption>Fundamental Scorecard (India)</figcaption>
+        </figure>
+        <figure class="thumb">
+          <img src="ASSETS/images/Fundamental and RAPI score Heatmap (US).png" alt="Heatmap US">
+          <figcaption>Fundamental Scorecard (US)</figcaption>
+        </figure>
+        <figure class="thumb">
+          <img src="ASSETS/images/Macroeconomic Cross-Sector CAS Heatmap-India.png" alt="CAS India">
+          <figcaption>CAS Heatmap (India)</figcaption>
+        </figure>
+        <figure class="thumb">
+          <img src="ASSETS/images/Macroeconomic Cross-Sector CAS Heatmap-US.png" alt="CAS US">
+          <figcaption>CAS Heatmap (US)</figcaption>
+        </figure>
       </div>
-    </div>
 
-    <div class="footer">© 2025 Akshat Gupta — Independent Researcher</div>
-  </div>
+      <!-- Thesis block (PDF) -->
+      <div class="thesis-block">
+        <h3>Research Thesis</h3>
+        <p class="muted">Status: SSRN — Under Review</p>
+        <p class="muted">Started: June 2025</p>
+        <a class="btn" href="https://akshatgupta2000.github.io/Research%20Thesis.pdf" target="_blank">Open Thesis PDF</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      © 2025 Akshat Gupta — Independent Researcher
+    </footer>
+  </main>
 </body>
 </html>
