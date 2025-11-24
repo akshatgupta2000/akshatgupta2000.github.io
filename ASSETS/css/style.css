@@ -1,98 +1,94 @@
+/* style.css - put at ASSETS/css/style.css */
+
+/* Base and theme colors */
 :root{
-  --bg:#0F1115;         /* page background */
-  --card:#17181A;       /* card background */
-  --text:#FFFFFF;
-  --muted:#B6BDC3;
-  --accent:#1E90FF;     /* blue accent (swapable) */
-  --icon-size:40px;
+  --bg: #0F1115;        /* page background - dark grey */
+  --card: #1E1E1E;      /* card background */
+  --muted: #9CA3AF;     /* muted text */
+  --accent: #00A3FF;    /* blue accent */
+  --text: #FFFFFF;      /* main text */
+  --max-width: 980px;
+  --radius: 10px;
 }
 
-body {
+/* Reset */
+*{box-sizing:border-box;margin:0;padding:0}
+body.theme-dark{
   background: var(--bg);
   color: var(--text);
-  font-family: Inter, system-ui, Arial, sans-serif;
-  margin:0;
-  padding:0 24px;
+  font-family: "Inter", "Poppins", system-ui, Arial, sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
+.container{max-width:var(--max-width);margin:36px auto;padding:0 20px}
 
-/* card container */
-.card {
-  background: var(--card);
-  border-radius:12px;
-  padding:18px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
-  margin: 16px 0;
-}
+/* Top nav */
+.topnav{display:flex;gap:12px;justify-content:flex-start;padding:12px 0 24px;align-items:center}
+.topnav .nav-link{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:8px}
+.topnav .nav-link.active{color:var(--accent);background:transparent;border-bottom:2px solid var(--accent)}
 
-/* small icon box used next to titles or buttons */
-.icon-box {
-  width: var(--icon-size);
-  height: var(--icon-size);
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  vertical-align:middle;
-  margin-right:12px;
-}
+/* Card */
+.card{background:var(--card);border-radius:var(--radius);padding:18px;margin-bottom:18px;box-shadow:0 6px 18px rgba(0,0,0,0.5)}
+.profile-card{display:flex;gap:18px;align-items:center}
+.avatar{width:120px;height:120px;border-radius:8px;object-fit:cover;border:2px solid rgba(255,255,255,0.04)}
+.avatar-small{width:72px;height:72px;border-radius:8px;object-fit:cover;border:2px solid rgba(255,255,255,0.04)}
 
-/* inline SVG styling */
-.icon-box svg {
-  width: 28px;
-  height: 28px;
-  stroke: var(--accent);
-  fill: none;
-  stroke-width: 1.8;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
+.profile-left{flex:0 0 140px}
+.profile-right{flex:1}
 
-/* for filled icons (like GitHub) */
-.icon-box svg.filled { fill: var(--accent); stroke: none; }
+.name{font-size:1.5rem;margin-bottom:6px}
+.role{color:var(--muted);margin-bottom:6px}
+.location{color:var(--muted);margin-bottom:12px}
+.about-text p{line-height:1.5;color:var(--muted)}
 
-/* avatar */
-.avatar {
-  width:110px;
-  height:110px;
-  border-radius:10px;
-  object-fit:cover;
-  display:block;
-}
+/* Contacts icons */
+.contacts{display:flex;gap:12px;margin-top:14px}
+.icon-link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:6px;background:transparent;border:1px solid rgba(255,255,255,0.02)}
+.icon-link svg{display:block}
 
-/* link icons row */
-.contact-icons a {
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  color:var(--text);
-  text-decoration:none;
-  margin-right:12px;
-}
+/* Grid two columns */
+.grid-two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-bottom:18px}
+.card-head{display:flex;gap:12px;align-items:center}
+.card-icon{flex:0 0 44px}
+.project-card h3{margin:0}
+.project-desc{color:var(--muted);margin:12px 0}
 
-/* repo card small icon */
-.repo-icon {
-  width:34px;height:34px;border-radius:8px;display:inline-grid;
-  place-items:center;margin-right:10px;
-  border:1px solid rgba(255,255,255,0.05);
-  background:transparent;
-}
+/* Buttons */
+.btn{display:inline-block;background:transparent;color:var(--accent);border:1px solid rgba(0,163,255,0.12);padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:600}
+.btn:hover{background:rgba(0,163,255,0.06)}
 
-.small-title { font-weight:600; color:var(--text); }
-.muted { color:var(--muted); font-size:0.95rem; }
+/* Gallery */
+.gallery .thumb-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:12px}
+.thumb{background:#0F1214;border-radius:8px;padding:8px;text-align:center}
+.thumb img{width:100%;height:120px;object-fit:cover;border-radius:6px}
+.thumb figcaption{color:var(--muted);font-size:0.9rem;margin-top:6px}
 
-/* percentage bar */
-.skill {
-  margin:10px 0;
+/* Thesis block */
+.thesis-block{margin-top:18px;padding:12px;border-radius:8px;background:rgba(255,255,255,0.02)}
+.thesis-block h3{margin:0 0 6px 0}
+.muted{color:var(--muted)}
+
+/* Resume layout */
+.resume-header{display:flex;align-items:center;gap:14px;justify-content:space-between}
+.contact-inline{display:flex;gap:12px;align-items:center}
+.resume-section{margin-top:18px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.03)}
+.two-columns{display:grid;grid-template-columns:1fr 320px;gap:18px}
+.timeline{display:block}
+.timeline-item{margin-bottom:14px;display:flex;gap:12px}
+.timeline-date{width:84px;color:var(--muted);font-size:0.9rem}
+.timeline-body{color:var(--muted);font-size:0.95rem}
+
+/* Skill bars */
+.skill{margin-bottom:12px}
+.skill-row{display:flex;justify-content:space-between;margin-bottom:6px}
+.skill-bar{height:10px;background:rgba(255,255,255,0.04);border-radius:6px;overflow:hidden}
+.skill-fill{height:100%;background:linear-gradient(90deg,var(--accent),#0086d6);border-radius:6px}
+
+/* Footer */
+.site-footer{text-align:center;margin-top:30px;color:var(--muted);font-size:0.9rem}
+
+/* Small responsive */
+@media (max-width:800px){
+  .two-columns{grid-template-columns:1fr}
+  .topnav{flex-wrap:wrap}
 }
-.skill .bar-bg {
-  height:12px;
-  background: rgba(255,255,255,0.06);
-  border-radius: 999px;
-  overflow:hidden;
-}
-.skill .bar-fill {
-  height:100%;
-  background: linear-gradient(90deg, var(--accent), #3ab1ff);
-  width:0%;
-  border-radius:999px;
-}
-.skill .label { display:flex; justify-content:space-between; font-size:0.9rem; margin-bottom:6px; color:var(--muted); }
