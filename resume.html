@@ -1,66 +1,84 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Akshat Gupta — Resume</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+<meta charset="UTF-8">
+<title>Akshat Gupta — Resume</title>
+<style>
+ body { background:#000; color:#fff; font-family:Arial; margin:0; padding:0; }
+ nav { text-align:center; padding:20px; border-bottom:1px solid #111; }
+ nav a { margin:0 20px; color:#4ade80; font-size:18px; }
+ .container { width:90%; max-width:900px; margin:30px auto; }
+
+ .timeline { border-left:3px solid #4ade80; margin-left:20px; padding-left:20px; }
+ .entry { margin-bottom:25px; }
+ .entry h3 { margin:0; }
+ .entry span { color:#4ade80; }
+
+ .skills { margin-top:40px; }
+ .bar { background:#111; border-radius:10px; height:12px; margin-bottom:15px; }
+ .fill { height:12px; border-radius:10px; background:#4ade80; }
+
+</style>
 </head>
-<body class="theme-dark">
-  <header class="site-header">
-    <nav class="topnav">
-      <a class="nav-link" href="about.html">About</a>
-      <a class="nav-link" href="projects.html">Projects</a>
-      <a class="nav-link active" href="resume.html">Resume</a>
-    </nav>
-  </header>
 
-  <main class="container resume-page">
-    <div class="two-col">
-      <aside class="profile-brief">
-        <img src="assets/images/My-Photo.png" alt="Akshat" class="avatar-small" />
-        <h2>Akshat Gupta</h2>
-        <p class="role">Independent Researcher — Financial Modelling & Cross-market Analysis</p>
-        <div class="contact-mini">
-          <div>Email: akshatgupta13427@gmail.com</div>
-          <div>LinkedIn: <a href="https://www.linkedin.com/in/akshat-gupta-2100ag" target="_blank">akshat-gupta-2100ag</a></div>
-        </div>
+<body>
 
-        <h3>Skills</h3>
-        <ul class="skills-list-compact">
-          <li>Excel — 90%</li>
-          <li>Power BI — 90%</li>
-          <li>MySQL — 75%</li>
-          <li>SAP S/4 HANA — 50%</li>
-        </ul>
-      </aside>
+<nav>
+  <a href="about.html">About</a>
+  <a href="projects.html">Projects</a>
+  <a href="resume.html">Resume</a>
+</nav>
 
-      <section class="resume-main">
-        <h1>Resume</h1>
+<div class="container">
 
-        <h3>Education</h3>
-        <ol class="timeline">
-          <li><strong>University</strong> — Degree (Year)</li>
-          <li><strong>Other University</strong> — Degree (Year)</li>
-        </ol>
+<h1>Resume</h1>
 
-        <h3>Experience & Internships</h3>
-        <ul>
-          <li><strong>Intern / Research Assistant</strong> — Company (Dates) — short bullet points of work</li>
-          <li><strong>Other Role</strong> — Company (Dates)</li>
-        </ul>
+<h2>About</h2>
+<p>
+Independent researcher specializing in cross-market sector forecasting, ROCE-valuation,
+RAPI modelling, CAS macro-factor modelling, and long-term financial projections.
+</p>
 
-        <h3>Selected Projects</h3>
-        <ul>
-          <li>Cross-Market Corporate Analysis (122 companies | 11 sectors) — thesis & scorecards</li>
-          <li>ROCE-based sector models — Excel & Power BI dashboards</li>
-        </ul>
+<h2>Education</h2>
 
-        <a class="btn" href="assets/Research-Resume.pdf" download>Download Full Resume (PDF)</a>
-      </section>
-    </div>
-  </main>
+<div class="timeline">
+  <div class="entry">
+    <h3>MBA – Finance</h3>
+    <span>2023 – 2025</span>
+  </div>
 
-  <footer class="site-footer">© Akshat Gupta</footer>
+  <div class="entry">
+    <h3>Bachelor of Commerce</h3>
+    <span>2020 – 2023</span>
+  </div>
+</div>
+
+<h2>Internships</h2>
+<div class="timeline">
+  <div class="entry">
+    <h3>Financial Modelling Intern</h3>
+    <span>2024</span>
+    <p>Built valuation models, sector reports, and dashboards.</p>
+  </div>
+</div>
+
+<h2>Skills</h2>
+
+<div class="skills">
+  <p>Excel — 90%</p>
+  <div class="bar"><div class="fill" style="width:90%"></div></div>
+
+  <p>Power BI — 90%</p>
+  <div class="bar"><div class="fill" style="width:90%"></div></div>
+
+  <p>MySQL — 75%</p>
+  <div class="bar"><div class="fill" style="width:75%"></div></div>
+
+  <p>SAP S/4 HANA — 50%</p>
+  <div class="bar"><div class="fill" style="width:50%"></div></div>
+</div>
+
+</div>
+
 </body>
 </html>
