@@ -1,66 +1,99 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Akshat Gupta — About</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+<body class="theme-dark">
 
-<body>
+  <header class="site-header">
+    <nav class="topnav">
+      <a class="nav-link active" href="about.html">About</a>
+      <a class="nav-link" href="projects.html">Projects</a>
+      <a class="nav-link" href="resume.html">Resume</a>
+    </nav>
+  </header>
 
-<nav>
-  <ul>
-    <li><a class="active" href="about.html">About</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="resume.html">Resume</a></li>
-  </ul>
-</nav>
+  <main class="container">
+    <aside class="profile-card">
+      <img src="assets/images/My-Photo.png" alt="Akshat Gupta" class="avatar" />
+      <h1 class="name">Akshat Gupta</h1>
+      <p class="role">Independent Researcher • Investment Research</p>
 
-<div class="container">
+      <div class="contact-list">
+        <div class="contact-item">
+          <svg class="icon-small" viewBox="0 0 24 24"><path d="M2 3h20v18H2z" fill="none"/></svg>
+          <a href="mailto:akshatgupta13427@gmail.com">akshatgupta13427@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <svg class="icon-small" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/></svg>
+          <a href="https://www.linkedin.com/in/akshat-gupta-2100ag" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <div class="contact-item">
+          <svg class="icon-small" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/></svg>
+          <a href="https://github.com/akshatgupta2000" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
 
-  <h1>Welcome</h1>
+      <div class="quick-meta">
+        <div><strong>Status:</strong> SSRN — Under review</div>
+        <div><strong>Companies:</strong> 122</div>
+        <div><strong>Sectors:</strong> 11</div>
+      </div>
+    </aside>
 
-  <div class="profile-card">
-    <img src="My-Photo.png" alt="Akshat Gupta">
+    <section class="about-section">
+      <h2>Welcome</h2>
+      <p class="lead">
+        I perform cross-market corporate analysis and statistical financial modelling across India & the US.
+        My work combines ROCE-based valuation frameworks, DCF/RIM (where applicable), RAPI scoring, CAS macro overlays,
+        and sector-level scorecards. I build Excel workbooks (advanced formulas & dashboards) and Power BI dashboards.
+      </p>
 
-    <div>
-      <h2>Akshat Gupta</h2>
-      <p><strong>Independent Researcher • Corporate & Cross-Market Analyst</strong></p>
-      <p>Specialising in ROCE valuation, sector scorecards, fundamental analysis, CAS, RAPI, 
-      and Excel-based financial modelling across India & US markets.</p>
+      <h3>Skills</h3>
+      <div class="skills-grid">
+        <!-- Excel -->
+        <div class="skill">
+          <div class="skill-head"><img src="assets/images/icon-excel.svg" alt="Excel" class="skill-icon"> Microsoft Excel</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:90%">90%</div></div>
+        </div>
 
-      <p>Email: <a href="mailto:akshatgupta2000@gmail.com">akshatgupta2000@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/akshatgupta2000">linkedin.com/in/akshatgupta2000</a></p>
-      <p>GitHub: <a href="https://github.com/akshatgupta2000">github.com/akshatgupta2000</a></p>
-    </div>
-  </div>
+        <!-- Power BI -->
+        <div class="skill">
+          <div class="skill-head"><img src="assets/images/icon-powerbi.svg" alt="Power BI" class="skill-icon"> Power BI</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:90%">90%</div></div>
+        </div>
 
-  <h2>Skills</h2>
+        <!-- MySQL -->
+        <div class="skill">
+          <div class="skill-head"><img src="assets/images/icon-mysql.svg" alt="MySQL" class="skill-icon"> MySQL</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:75%">75%</div></div>
+        </div>
 
-  <div class="skills-grid">
+        <!-- SAP -->
+        <div class="skill">
+          <div class="skill-head"><img src="assets/images/icon-sap.svg" alt="SAP" class="skill-icon"> SAP Fiori / S/4 HANA</div>
+          <div class="skill-bar"><div class="skill-fill" style="width:50%">50%</div></div>
+        </div>
+      </div>
 
-    <div class="skill-box">
-      <img src="icons/excel.svg">
-      <p><strong>Microsoft Excel</strong></p>
-    </div>
+      <h3>Short summary</h3>
+      <p>
+        This project compares sector fundamentals & valuation across India and the United States for 2020–2030. Core outputs include sector scorecards, ROCE→P/E mapping, RAPI scores, CAS macro overlays, and Excel workbooks with dashboards. The full thesis is a 260+ page PDF available from the Projects page once SSRN publishes.
+      </p>
 
-    <div class="skill-box">
-      <img src="icons/powerbi.svg">
-      <p><strong>Power BI</strong></p>
-    </div>
+      <div class="links-row">
+        <a class="btn btn-outline" href="projects.html">Projects</a>
+        <a class="btn" href="resume.html">Resume</a>
+      </div>
+    </section>
+  </main>
 
-    <div class="skill-box">
-      <img src="icons/mysql.svg">
-      <p><strong>MySQL</strong></p>
-    </div>
-
-    <div class="skill-box">
-      <img src="icons/sap.svg">
-      <p><strong>SAP S/4 HANA (Fiori)</strong></p>
-    </div>
-
-  </div>
-
-</div>
+  <footer class="site-footer">
+    © Akshat Gupta — Independent Researcher
+  </footer>
 
 </body>
 </html>
