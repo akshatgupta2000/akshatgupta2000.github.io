@@ -1,108 +1,85 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Akshat Gupta — Resume</title>
-<style>
-  :root{--bg:#121217;--card:#1b1c20;--muted:#a9b0b6;--accent:#07c67a;--white:#fff;--maxw:900px;font-family:Inter,system-ui,Roboto,Arial;}
-  body{background:var(--bg);color:var(--white);margin:0}
-  .wrap{max-width:var(--maxw);margin:28px auto;padding:20px}
-  .nav{display:flex;gap:12px;margin-bottom:16px}
-  .nav a{color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:8px}
-  .nav a.active{background:linear-gradient(90deg,rgba(7,198,122,0.08),rgba(7,198,122,0.03));color:var(--white)}
-  .card{background:var(--card);padding:18px;border-radius:12px;margin-bottom:12px}
-  .timeline{list-style:none;padding:0;margin:0}
-  .timeline li{padding:12px 0;border-left:2px solid rgba(255,255,255,0.03);margin-left:10px;position:relative}
-  .timeline li:before{content:"";position:absolute;left:-14px;top:14px;width:10px;height:10px;background:var(--accent);border-radius:50%}
-  .section-title{font-size:16px;margin-bottom:8px}
-  .skill{display:flex;align-items:center;gap:10px;margin-bottom:8px}
-  .skill-name{width:120px}
-  .skill-bar{background:rgba(255,255,255,0.05);height:10px;border-radius:8px;flex:1;overflow:hidden}
-  .skill-fill{height:10px;background:linear-gradient(90deg,var(--accent),#0ad689)}
-  .meta{color:var(--muted);font-size:13px}
-  footer{color:var(--muted);text-align:center;margin-top:14px}
-</style>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Resume — Akshat Gupta</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="wrap">
-    <div style="display:flex;justify-content:space-between;align-items:center">
-      <div style="font-weight:800;font-size:20px">Resume</div>
-      <nav class="nav">
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="resume.html" class="active">Resume</a>
-      </nav>
+
+<nav class="navbar">
+  <a href="about.html" class="nav-link">About</a>
+  <a href="projects.html" class="nav-link">Projects</a>
+  <a href="resume.html" class="nav-link active">Resume</a>
+</nav>
+
+<section class="resume-container">
+
+  <h1 class="page-title">Resume</h1>
+
+  <!-- Education -->
+  <div class="timeline-block">
+    <h2>Education</h2>
+
+    <div class="timeline-item">
+      <h3>MBA — Finance</h3>
+      <p class="timeline-date">2023 – 2025</p>
+      <p>Guru Gobind Singh Indraprastha University (GGSIPU)</p>
     </div>
 
-    <div class="card">
-      <div style="display:flex;align-items:flex-start;gap:18px">
-        <img src="/ASSETS/Images/My-Photo.png" style="width:96px;height:96px;border-radius:10px;object-fit:cover" alt="photo">
-        <div>
-          <div style="font-weight:700;font-size:18px">Akshat Gupta</div>
-          <div class="meta" style="margin-top:6px">Finance graduate • Investment Research • Financial modelling & sector analysis</div>
-          <div style="margin-top:10px"><a class="meta" href="/Research%20Thesis.pdf" target=_blank>Research Thesis (PDF)</a></div>
-        </div>
-      </div>
+    <div class="timeline-item">
+      <h3>BBA — Finance</h3>
+      <p class="timeline-date">2020 – 2023</p>
+      <p>J.C. Bose University of Science & Technology</p>
     </div>
-
-    <div class="card">
-      <div class="section-title">Education</div>
-      <ol class="timeline">
-        <li>
-          <div style="font-weight:700">Master’s in Business Administration — Finance</div>
-          <div class="meta">ICFAI Business School, Bangalore — 2025</div>
-        </li>
-        <li>
-          <div style="font-weight:700">Bachelor’s in Business Administration</div>
-          <div class="meta">Asian School of Business, Noida — 2022</div>
-        </li>
-      </ol>
-    </div>
-
-    <div class="card">
-      <div class="section-title">Experience & Internship</div>
-      <ol class="timeline">
-        <li>
-          <div style="font-weight:700">Financial Analysis Intern — Grow Well, Gurgaon (MBA internship)</div>
-          <div class="meta">11 weeks — Study of Financial Statements using Ratio Analysis</div>
-          <div style="margin-top:8px;color:var(--muted)">Key outcomes: performed detailed financial and ratio analysis for 6 insurance companies (solvency, liquidity, profitability, capital adequacy); created structured review templates and benchmark dashboards supporting internal decision-making and sales onboarding; prepared comparative dashboards to highlight performance differentials.</div>
-        </li>
-        <li>
-          <div style="font-weight:700">Independent Research Project — Cross-Sector Equity Analysis (India & US)</div>
-          <div class="meta">2025 — Built forecasts and valuation models across 122 companies (11 sectors)</div>
-        </li>
-      </ol>
-    </div>
-
-    <div class="card">
-      <div class="section-title">Skills</div>
-      <div style="display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap">
-        <div style="flex:1;min-width:300px">
-          <div class="skill"><div class="skill-name">Microsoft Excel</div><div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div><div style="width:40px;text-align:right">90%</div></div>
-          <div class="skill"><div class="skill-name">Power BI</div><div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div><div style="width:40px;text-align:right">90%</div></div>
-          <div class="skill"><div class="skill-name">MySQL</div><div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div><div style="width:40px;text-align:right">75%</div></div>
-          <div class="skill"><div class="skill-name">SAP S/4 HANA</div><div class="skill-bar"><div class="skill-fill" style="width:50%"></div></div><div style="width:40px;text-align:right">50%</div></div>
-        </div>
-        <div style="flex:1;min-width:260px">
-          <div style="font-weight:700;margin-bottom:8px">Technical tools</div>
-          <div class="meta">Microsoft Excel (Advanced) · Power BI · MySQL · SAP S/4 HANA · Bloomberg (academic)</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="section-title">Certifications</div>
-      <ul style="margin:0;padding-left:18px;color:var(--muted)">
-        <li>Introduction to Technical Analysis — NSE Academy (July 2024)</li>
-        <li>Investment Analysis & Portfolio Management — NSE Academy (Nov 2024)</li>
-        <li>ESG — Bloomberg (July 2024)</li>
-      </ul>
-    </div>
-
-    <footer>
-      Generated from user CV. If you want different phrasing, tell me the exact lines to edit. 3
-    </footer>
   </div>
+
+  <!-- Experience -->
+  <div class="timeline-block">
+    <h2>Internship Experience</h2>
+
+    <div class="timeline-item">
+      <h3>Financial Statements Analysis Intern — Grow Well Industries</h3>
+      <p class="timeline-date">Apr 2024 – Jun 2024</p>
+      <p>
+        Conducted a structured analysis of financial statements using ratio analysis,  
+        focusing on profitability, liquidity, leverage, and efficiency KPIs.  
+        Prepared comparative performance summaries, validated financial data,  
+        and built formatted reporting templates for periodic assessment.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Skills -->
+  <div class="skills-section">
+    <h2>Skills</h2>
+
+    <div class="skill-bar">
+      <span>Microsoft Excel</span>
+      <div class="bar"><div class="fill" style="width: 90%;"></div></div>
+    </div>
+
+    <div class="skill-bar">
+      <span>Power BI</span>
+      <div class="bar"><div class="fill" style="width: 90%;"></div></div>
+    </div>
+
+    <div class="skill-bar">
+      <span>MySQL</span>
+      <div class="bar"><div class="fill" style="width: 75%;"></div></div>
+    </div>
+
+    <div class="skill-bar">
+      <span>SAP S/4 HANA (Fiori)</span>
+      <div class="bar"><div class="fill" style="width: 50%;"></div></div>
+    </div>
+
+  </div>
+
+</section>
+
 </body>
 </html>
