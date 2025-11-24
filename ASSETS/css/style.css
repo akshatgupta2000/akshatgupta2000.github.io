@@ -1,236 +1,149 @@
-/* --------------------------
-   Cross-Market: Portfolio CSS
-   Theme B: Dark grey background, white text, blue/green accents
-   -------------------------- */
-
-:root{
-  --bg: #0f1113;           /* near-black background */
-  --panel: #16181a;        /* slightly lighter panel */
-  --card: #1b1e20;         /* card surface */
-  --muted: #9aa3a8;        /* muted text */
-  --white: #ffffff;
-  --accent: #21b07a;       /* green accent (buttons) */
-  --accent2: #2aa0e0;      /* blue accent for links / repo icons */
-  --glass: rgba(255,255,255,0.03);
-  --radius: 12px;
-  --max-width: 1100px;
-  --transition: 180ms ease;
-  --shadow: 0 8px 30px rgba(2,6,10,0.6);
-  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+/* Global */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0F0F0F;
+  color: #FFFFFF;
+  margin: 0;
+  padding: 0;
 }
 
-/* Reset + base */
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  background:var(--bg);
-  color:var(--white);
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  font-size:16px;
-  line-height:1.5;
+nav.navbar {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  background: #131313;
+  border-bottom: 1px solid #1E1E1E;
 }
 
-/* page container */
-.container{
-  max-width:var(--max-width);
-  margin:36px auto;
-  padding:24px;
+.nav-link {
+  color: #B0B0B0;
+  text-decoration: none;
+  font-size: 1.1rem;
 }
 
-/* NAVBAR (top simple) */
-.navbar{
-  display:flex;
-  gap:12px;
-  align-items:center;
-  margin-bottom:28px;
-}
-.navbar .brand{
-  font-weight:700;
-  font-size:1.25rem;
-  margin-right:18px;
-}
-.navbar .links{
-  display:flex;
-  gap:12px;
-  margin-left:auto;
-}
-.navbar a{
-  color:var(--muted);
-  text-decoration:none;
-  padding:10px 14px;
-  border-radius:8px;
-  transition:color var(--transition), background var(--transition);
-  font-weight:600;
-  font-size:.98rem;
-}
-.navbar a:hover{ color:var(--white); background:var(--glass); }
-.navbar a.active{
-  color:var(--accent2);
-  background:rgba(42,160,224,0.06);
-  box-shadow:none;
-  text-decoration:none;
+.nav-link:hover {
+  color: #00BFFF;
 }
 
-/* two-column layout for About and Resume left card */
-.row{
-  display:grid;
-  grid-template-columns: 320px 1fr;
-  gap:20px;
-  align-items:start;
+.nav-link.active {
+  color: #00BFFF;
+  font-weight: 600;
 }
 
-/* profile card (left) */
-.profile-card{
-  background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.01));
-  border-radius:var(--radius);
-  padding:20px;
-  box-shadow:var(--shadow);
-  min-height:220px;
-  border:1px solid rgba(255,255,255,0.02);
-}
-.avatar{
-  width:100%;
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
-.avatar img{
-  width:84px;
-  height:84px;
-  object-fit:cover;
-  border-radius:14px;
-  border:2px solid rgba(255,255,255,0.04);
-  background:linear-gradient(180deg,#1b1e20,#16181a);
-}
-.profile-name{ font-size:1.15rem; font-weight:700; margin:0; }
-.profile-role{ color:var(--muted); font-size:.95rem; margin-top:6px; }
-
-/* contact items */
-.contact-list{ margin-top:18px; display:flex; flex-direction:column; gap:10px; }
-.contact-item{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  padding:8px;
-  border-radius:10px;
-  background:rgba(255,255,255,0.01);
-  color:var(--muted);
-  font-size:.95rem;
-}
-.contact-item svg{ width:22px; height:22px; fill:none; stroke:var(--accent2); stroke-width:1.6; }
-.contact-item .text{ color:var(--white); font-weight:600; }
-
-/* main content card (right) */
-.card{
-  background:var(--card);
-  border-radius:var(--radius);
-  padding:22px;
-  box-shadow:var(--shadow);
-  border:1px solid rgba(255,255,255,0.02);
+/* About */
+.about-container {
+  display: flex;
+  gap: 50px;
+  padding: 40px;
 }
 
-/* executive summary / about text */
-.article-title{ font-size:1.1rem; margin:0 0 12px 0; font-weight:700; color:var(--white); }
-.lead{ color:var(--muted); margin-bottom:14px; }
-
-/* skills grid */
-.skills{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-}
-.skill-item{
-  width:220px;
-  background:rgba(255,255,255,0.01);
-  border-radius:10px;
-  padding:10px;
-  font-size:.9rem;
-}
-.skill-label{ display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; color:var(--muted); }
-.skill-bar{ background:rgba(255,255,255,0.03); height:10px; border-radius:999px; overflow:hidden; }
-.skill-fill{ height:10px; border-radius:999px; background:linear-gradient(90deg,var(--accent),var(--accent2)); transition:width 400ms ease; }
-
-/* repo cards for Projects page */
-.repo-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:16px;
-}
-.repo-card{
-  background:rgba(255,255,255,0.02);
-  border-radius:12px;
-  padding:16px;
-  display:flex;
-  gap:12px;
-  align-items:center;
-  border:1px solid rgba(255,255,255,0.02);
-}
-.repo-icon{
-  width:62px;height:62px;border-radius:10px;
-  display:flex;align-items:center;justify-content:center;
-  background:transparent;
-  border:2px solid rgba(255,255,255,0.03);
-  color:var(--accent2);
-  font-size:1.4rem;
-}
-.repo-body{ flex:1; }
-.repo-title{ margin:0; font-weight:700; color:var(--white); }
-.repo-desc{ color:var(--muted); margin-top:6px; font-size:.95rem; }
-
-/* key visuals area (images) */
-.visuals{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:12px;
-  margin-top:12px;
-}
-.visuals img{
-  width:100%;
-  border-radius:10px;
-  border:1px solid rgba(255,255,255,0.03);
-  display:block;
-  background:linear-gradient(180deg, #0f1113, #141617);
+.profile-card {
+  background: #1A1A1A;
+  padding: 25px;
+  border-radius: 10px;
+  width: 320px;
+  text-align: center;
 }
 
-/* resume timeline */
-.timeline{
-  margin-top:8px;
-}
-.timeline-item{
-  display:flex;
-  gap:12px;
-  margin-bottom:16px;
-}
-.timeline-icon{
-  width:46px; height:46px; border-radius:10px; background:rgba(255,255,255,0.02);
-  display:flex; align-items:center; justify-content:center; color:var(--accent2);
-}
-.timeline-content h4{ margin:0; font-weight:700; color:var(--white); }
-.timeline-content span{ color:var(--accent); font-weight:700; font-size:.95rem; display:block; margin-top:6px; }
-
-/* small screens */
-@media (max-width:880px){
-  .row{ grid-template-columns: 1fr; }
-  .navbar .links{ margin-left:0; margin-top:12px; flex-wrap:wrap }
-  .container{ padding:16px; margin:18px auto; }
-  .repo-icon{ width:52px;height:52px; }
+.profile-photo {
+  width: 150px;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
 
-/* utility */
-.btn{
-  display:inline-block;
-  background:var(--accent);
-  color:var(--white);
-  padding:10px 14px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:700;
-  transition:transform var(--transition);
+.name {
+  font-size: 1.8rem;
 }
-.btn.secondary{
-  background:transparent;
-  color:var(--accent2);
-  border:1px solid rgba(42,160,224,0.12);
+
+.role {
+  color: #00BFFF;
+  margin-bottom: 20px;
+}
+
+.bio-section {
+  max-width: 650px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* Project Page */
+.project-container {
+  padding: 40px;
+}
+
+.page-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.card-grid {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  background: #1A1A1A;
+  padding: 25px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.project-card h3 {
+  margin-top: 10px;
+}
+
+.btn {
+  background: #00BFFF;
+  padding: 10px 16px;
+  display: inline-block;
+  margin-top: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+}
+
+/* Resume */
+.timeline-block {
+  padding: 30px;
+}
+
+.timeline-item {
+  margin-bottom: 20px;
+  border-left: 3px solid #00BFFF;
+  padding-left: 12px;
+}
+
+.timeline-date {
+  color: #00BFFF;
+}
+
+.skills-section {
+  padding: 30px;
+}
+
+.skill-bar {
+  margin-bottom: 20px;
+}
+
+.skill-bar span {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.bar {
+  background: #2A2A2A;
+  border-radius: 8px;
+  height: 12px;
+}
+
+.fill {
+  background: #00BFFF;
+  height: 12px;
+  border-radius: 8px;
 }
