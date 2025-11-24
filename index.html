@@ -4,211 +4,213 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Akshat Gupta — Research & Financial Models</title>
-  <meta name="description" content="Akshat Gupta — Cross-market corporate analysis & financial models (India & US). Thesis, models, heatmaps, dashboards." />
+  <meta name="description" content="Akshat Gupta — Cross-market corporate analysis & financial models (India & US). 122-company cross sector research and models." />
   <meta property="og:title" content="Akshat Gupta — Cross-Market Corporate Analysis" />
-  <meta property="og:description" content="122-company, 11-sector cross-market analysis (India vs US) with models & dashboards." />
-  <!-- Replace with your own image path if you have an OG image -->
-  <meta property="og:image" content="https://raw.githubusercontent.com/akshatgupta2000/Cross-Market-Corporate-Analysis-2020-2030/main/assets/og-image.png" />
+  <meta property="og:description" content="Decoding India & US corporate landscape: fundamentals, ROCE-PE, RAPI, CAS, heatmaps and forecast models to 2030." />
+  <!-- Replace with your final OG image path after upload -->
+  <meta property="og:image" content="assets/images/preview-thumb.png" />
+
+  <!-- Google Analytics placeholder: replace G-XXXXXXX with your ID or remove -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX', { 'anonymize_ip': true });
+  </script>
 
   <style>
     :root{
-      --bg:#0f1724; --panel:#07101a; --muted:#94a3b8; --accent1:#06b6d4; --accent2:#7c3aed;
-      --glass: rgba(255,255,255,0.04);
-      --card-border: linear-gradient(135deg, rgba(6,182,212,0.12), rgba(124,58,237,0.08));
+      --bg:#06070a;
+      --card:#0f1720;
+      --muted:#9aa5b1;
+      --accent:#00d4b8;
+      --accent-2:#5ad1ff;
+      --glass: rgba(255,255,255,0.03);
+      --glass-2: rgba(255,255,255,0.04);
+      --radius: 12px;
+      --container: 1100px;
     }
     html,body{height:100%;margin:0;background:
-      radial-gradient(1200px 400px at 10% 10%, rgba(7,16,26,0.65), transparent),
-      linear-gradient(180deg,#071428 0%, #041021 100%);
-      color:#e6eef6;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;}
-    .wrap{max-width:1100px;margin:36px auto;padding:28px;border-radius:14px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow: 0 6px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .title {display:flex;gap:14px;align-items:center}
-    .logo{
-      width:74px;height:74px;border-radius:12px;
-      background:linear-gradient(135deg,var(--accent1),var(--accent2));
-      display:flex;align-items:center;justify-content:center;font-weight:700;color:#021029;font-size:28px;box-shadow:0 6px 24px rgba(124,58,237,0.12);
+      radial-gradient(800px 400px at 5% 10%, rgba(0,212,184,0.06), transparent 8%),
+      radial-gradient(700px 350px at 95% 90%, rgba(90,209,255,0.03), transparent 8%),
+      var(--bg); color:#e6eef3; font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Helvetica Neue", Arial;}
+    .wrap{max-width:var(--container);margin:32px auto;padding:28px;}
+    header{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo {
+      width:70px;height:70px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      display:flex;align-items:center;justify-content:center;font-weight:800;color:#041017;font-size:22px;box-shadow:0 6px 30px rgba(0,0,0,0.5);
     }
-    h1{margin:0;font-size:26px}
-    p.lead{margin:2px 0 0;color:var(--muted);font-size:13px}
-    .actions{display:flex;gap:10px;align-items:center}
-    .btn{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#021029;padding:9px 12px;border-radius:8px;font-weight:600;text-decoration:none;box-shadow:0 6px 18px rgba(6,182,212,0.06)}
-    .btn.secondary{background:transparent;color:#dff6ff;border:1px solid rgba(255,255,255,0.04)}
-    .grid{display:grid;grid-template-columns:1fr 380px;gap:20px;margin-top:22px}
-    /* left column */
-    .panel{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:16px;border:1px solid rgba(255,255,255,0.03)}
-    .project-cards{display:grid;grid-template-columns:1fr;gap:14px}
-    .card{padding:14px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.01));box-shadow:var(--card-border);border-left:6px solid rgba(255,255,255,0.02)}
-    .card h3{margin:0 0 6px;color:#f8fbff}
-    .card p{margin:0;color:var(--muted);font-size:13px}
-    .card .meta{margin-top:10px;display:flex;gap:8px;align-items:center}
-    .badge{background:rgba(255,255,255,0.03);padding:6px 8px;border-radius:8px;font-weight:600;color:var(--muted);font-size:12px}
-    /* right column - PDF viewer */
-    .viewer{height:720px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.006), rgba(255,255,255,0.01));overflow:hidden;display:flex;flex-direction:column}
-    .viewer-header{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border-bottom:1px solid rgba(255,255,255,0.02)}
-    .viewer-embed{flex:1;background:#021026;display:flex;align-items:center;justify-content:center}
-    iframe{width:100%;height:100%;border:0}
-    .thumbs{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
-    .thumb{width:120px;height:80px;border-radius:8px;background:var(--glass);display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid rgba(255,255,255,0.03)}
-    .thumb img{width:100%;height:100%;object-fit:cover}
-    /* gallery */
-    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
-    .gcard{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.01));border-radius:8px;padding:8px;border:1px solid rgba(255,255,255,0.02)}
-    .gcard img{width:100%;height:140px;object-fit:cover;border-radius:6px}
-    /* footer */
-    footer{margin-top:20px;color:var(--muted);font-size:13px;text-align:center;padding:18px}
-    /* responsive */
-    @media (max-width:980px){
-      .grid{grid-template-columns:1fr; }
-      .viewer{height:520px}
-      .gallery{grid-template-columns:repeat(2,1fr)}
+    h1{margin:0;font-size:1.35rem;letter-spacing:0.2px}
+    .subtitle{color:var(--muted);font-size:0.95rem;margin-top:4px}
+    nav{display:flex;gap:8px;align-items:center}
+    .btn{background:linear-gradient(90deg,var(--accent),var(--accent-2));padding:10px 14px;border-radius:10px;color:#041017;text-decoration:none;font-weight:600;box-shadow:0 6px 20px rgba(0,0,0,0.45)}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--accent)}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:22px;margin-top:22px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:20px;border-radius:var(--radius);box-shadow: 0 6px 30px rgba(6,8,12,0.6); border:1px solid rgba(255,255,255,0.02)}
+    .project-title{font-weight:700;margin:0 0 8px 0;font-size:1.05rem}
+    .muted{color:var(--muted);font-size:0.92rem}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+    .meta{display:flex;gap:12px;align-items:center;margin-top:12px}
+    .pill{background:var(--glass);padding:6px 10px;border-radius:999px;font-size:0.85rem;color:var(--muted)}
+    .viewer{height:640px;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.03)}
+    .viewer iframe{width:100%;height:100%;border:none;background:white}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:14px}
+    .thumb{border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.03);background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));display:block}
+    .thumb img{display:block;width:100%;height:150px;object-fit:cover;filter:contrast(0.95) saturate(1.05)}
+    footer{margin-top:28px;color:var(--muted);font-size:0.9rem;text-align:center;padding:20px 0}
+    @media(max-width:980px){
+      .hero{grid-template-columns:1fr; }
+      .viewer{height:420px}
     }
-    /* subtle hover */
-    .card:hover, .gcard:hover{transform:translateY(-6px);transition:all .25s ease}
-    a.small{font-size:13px;color:#cfeff7;text-decoration:none}
-    /* theme toggle */
-    .theme-toggle{cursor:pointer;background:transparent;border:1px solid rgba(255,255,255,0.03);padding:8px;border-radius:8px;color:var(--muted)}
+    /* little futuristic accent lines */
+    .accent-line{height:3px;border-radius:6px;background:linear-gradient(90deg,var(--accent),var(--accent-2));margin:12px 0 4px}
+    .small{font-size:0.9rem;color:var(--muted)}
+    .repo-card{display:flex;flex-direction:column;gap:10px}
+    .repo-links{display:flex;gap:8px;flex-wrap:wrap}
+    .label{font-size:0.82rem;color:var(--muted)}
   </style>
 </head>
 <body>
-  <div class="wrap" role="main">
+  <div class="wrap">
     <header>
-      <div class="title">
+      <div class="brand">
         <div class="logo">AG</div>
         <div>
           <h1>Akshat Gupta</h1>
-          <p class="lead">Independent Researcher — Cross-Market Corporate Analysis (India & US) • Financial Models & ESG</p>
+          <div class="subtitle">Investment Research · Financial Modelling · Cross-Market Analysis (India & US)</div>
         </div>
       </div>
 
-      <div class="actions">
+      <nav>
         <a class="btn" href="https://github.com/akshatgupta2000" target="_blank">GitHub</a>
-        <a class="btn secondary" href="https://www.linkedin.com/in/akshat-gupta-2100ag" target="_blank">LinkedIn</a>
-        <button class="theme-toggle" id="toggleTheme">Toggle Theme</button>
-      </div>
+        <a class="btn ghost" href="https://www.linkedin.com/in/akshat-gupta-2100ag" target="_blank">LinkedIn</a>
+      </nav>
     </header>
 
-    <div class="grid" style="margin-top:18px">
+    <div class="hero">
+      <!-- Left: Overview + projects -->
       <div>
-        <div class="panel project-cards">
-          <!-- Project 1 -->
-          <div class="card">
-            <h3>Cross-Market Corporate Analysis (2020–2030)</h3>
-            <p>260-page independent thesis comparing 122 companies across 11 sectors in India & the U.S. (ROCE, valuations, CAS, RAPI).</p>
-            <div class="meta">
-              <span class="badge">Thesis • 122 companies</span>
-              <a class="small" href="https://github.com/akshatgupta2000/Cross-Market-Corporate-Analysis-2020-2030" target="_blank" style="margin-left:auto">View repo →</a>
+        <div class="card">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px">
+            <div>
+              <div class="project-title">Decoding India & US — Cross-Sector Fundamentals and Outlook to 2030</div>
+              <div class="muted">Independent Research • 122 companies • 11 sectors • Forecasts: 2025–2030</div>
             </div>
-            <div style="margin-top:12px;display:flex;gap:8px;">
-              <a class="btn" href="https://raw.githubusercontent.com/akshatgupta2000/akshatgupta2000.github.io/main/Research%20Thesis.pdf" target="_blank" download>Download Thesis (PDF)</a>
-              <a class="btn secondary" href="#viewer" style="margin-left:8px">Open viewer</a>
+            <div style="text-align:right">
+              <div class="pill">Status: <strong style="color:#dff6ef;margin-left:6px">SSRN — Under Review</strong></div>
+              <div class="muted" style="margin-top:8px">Started: June 2025</div>
             </div>
           </div>
 
-          <!-- Project 2 -->
-          <div class="card">
-            <h3>Cross-Market Financial Models (2020–2030)</h3>
-            <p>Excel workbook with ROCE-PE, heatmaps (CAS & RAPI), sector models and dashboards (India + US sheets).</p>
-            <div class="meta">
-              <span class="badge">Models • Excel</span>
-              <a class="small" href="https://github.com/akshatgupta2000/Cross-Market-Financial-Models-2020-2030" target="_blank" style="margin-left:auto">View repo →</a>
+          <div class="accent-line"></div>
+
+          <p class="small" style="margin-top:12px">
+            This project combines ROCE-driven valuation, DCF & relative models, sector scorecards (Profitability, Efficiency,
+            Leverage, Growth, Valuation), RAPI and CAS frameworks, and cross-market insights across India and the United States.
+          </p>
+
+          <div class="meta">
+            <div class="pill">122 companies</div>
+            <div class="pill">11 sectors</div>
+            <div class="pill">DCF, RIM, ROCE frameworks</div>
+          </div>
+
+          <div class="grid-2" style="margin-top:14px">
+            <div>
+              <a class="btn" href="/Research Thesis.pdf" target="_blank" rel="noopener">View / Download Thesis (PDF)</a>
             </div>
-            <div style="margin-top:10px" class="thumbs">
-              <!-- thumbnails (these use raw.githubusercontent paths — verify filenames if you moved them) -->
-              <a class="thumb" href="https://raw.githubusercontent.com/akshatgupta2000/Cross-Market-Financial-Models-2020-2030/main/India/Fundamental%20and%20RAPI%20score%20Heatmaps%20(India).png" target="_blank">
-                <img src="https://raw.githubusercontent.com/akshatgupta2000/Cross-Market-Financial-Models-2020-2030/main/India/Fundamental%20and%20RAPI%20score%20Heatmaps%20(India).png" alt="India heatmap">
-              </a>
-              <a class="thumb" href="https://raw.githubusercontent.com/akshatgupta2000/Cross-Market-Financial-Models-2020-2030/main/United%20States/Fundamental%20and%20RAPI%20score%20Heatmap%20(US).png" target="_blank">
-                <img src="https://raw.githubusercontent.com/akshatgupta2000/Cross-Market-Financial-Models-2020-2030/main/United%20States/Fundamental%20and%20RAPI%20score%20Heatmap%20(US).png" alt="US heatmap">
-              </a>
-              <a class="thumb" href="https://raw.githubusercontent.com/akshatgupta2000/Cross-Market-Financial-Models-2020-2030/main/Financial%20Models%20(Market%20Analysis).xlsx" target="_blank">
-                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='200'><rect width='100%' height='100%' fill='%23021026'/><text x='50%' y='50%' font-size='18' fill='%23cfeff7' dominant-baseline='middle' text-anchor='middle'>Financial Models (xlsx)</text></svg>" alt="xl">
-              </a>
+            <div style="text-align:right">
+              <div class="label">Repos</div>
+              <div class="repo-links" style="justify-content:flex-end">
+                <a class="btn ghost" href="https://github.com/akshatgupta2000/Cross-Market-Corporate-Analysis-2020-2030" target="_blank">Corporate Analysis</a>
+                <a class="btn ghost" href="https://github.com/akshatgupta2000/Cross-Market-Financial-Models-2020-2030" target="_blank">Financial Models</a>
+              </div>
             </div>
+          </div>
+
+          <div style="margin-top:12px;font-size:0.9rem;color:var(--muted)">
+            <strong>Quick preview:</strong> scroll the embedded viewer on the right to open the PDF directly on this page.
           </div>
         </div>
 
-        <!-- gallery / visuals -->
-        <div class="panel" style="margin-top:14px;">
-          <h3 style="margin:0 0 8px">Key Visuals (selected)</h3>
-          <p style="margin:0 0 8px;color:var(--muted);font-size:13px">Click any image to open full resolution.</p>
+        <div class="card" style="margin-top:14px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <div class="project-title">Key Visuals</div>
+              <div class="muted">Heatmaps & sector scorecards (click to enlarge)</div>
+            </div>
+          </div>
 
-          <div class="gallery">
-            <!-- Update these src URLs if your images are in different paths -->
-            <div class="gcard"><img src="https://raw.githubusercontent.com/akshatgupta2000/Cross-Market-Financial-Models-2020-2030/main/India/FSI-India.png" alt="FSI India"></div>
-            <div class="gcard"><img src="https://raw.githubusercontent.com/akshatgupta2000/Cross-Market-Financial-Models-2020-2030/main/United%20States/FSI-United%20States.png" alt="FSI US"></div>
-            <div class="gcard"><img src="https://raw.githubusercontent.com/akshatgupta2000/Cross-Market-Financial-Models-2020-2030/main/India/Macroeconomic%20Cross-Sector%20CAS%20Heatmap-India.png" alt="CAS India"></div>
-
-            <div class="gcard"><img src="https://raw.githubusercontent.com/akshatgupta2000/Cross-Market-Financial-Models-2020-2030/main/United%20States/Fundamental%20and%20RAPI%20score%20Heatmap%20(US).png" alt="RAPI US"></div>
-            <div class="gcard"><img src="https://raw.githubusercontent.com/akshatgupta2000/Cross-Market-Financial-Models-2020-2030/main/India/Fundamental%20and%20RAPI%20score%20Heatmaps%20(India).png" alt="RAPI India"></div>
-            <div class="gcard"><img src="https://raw.githubusercontent.com/akshatgupta2000/Cross-Market-Financial-Models-2020-2030/main/Financial%20Models%20(Market%20Analysis).xlsx" alt="models" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22120%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%2302112a%22/><text x=%2250%25%22 y=%2250%25%22 fill=%22%23cfeff7%22 font-size=%2214%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22>Model workbook</text></svg>'"></div>
+          <div class="gallery" style="margin-top:12px">
+            <!-- Use the image filenames you uploaded to assets/images/ -->
+            <a class="thumb" href="assets/images/Fundamental-and-RAPI-score-Heatmaps-India.png" target="_blank" title="India - Fundamental & RAPI Heatmaps">
+              <img src="assets/images/Fundamental-and-RAPI-score-Heatmaps-India.png" alt="Heatmaps India">
+            </a>
+            <a class="thumb" href="assets/images/Macroeconomic-CAS-India.png" target="_blank" title="India - CAS Macro">
+              <img src="assets/images/Macroeconomic-CAS-India.png" alt="CAS India">
+            </a>
+            <a class="thumb" href="assets/images/Fundamental-and-RAPI-score-Heatmap-US.png" target="_blank" title="US - Fundamental & RAPI Heatmaps">
+              <img src="assets/images/Fundamental-and-RAPI-score-Heatmap-US.png" alt="Heatmaps US">
+            </a>
+            <a class="thumb" href="assets/images/Macroeconomic-CAS-US.png" target="_blank" title="US - CAS Macro">
+              <img src="assets/images/Macroeconomic-CAS-US.png" alt="CAS US">
+            </a>
           </div>
         </div>
       </div>
 
-      <!-- right column: PDF viewer + metadata -->
-      <aside>
-        <div id="viewer" class="viewer panel">
-          <div class="viewer-header">
-            <div>
-              <strong>Research Thesis: Decoding India & US Corporate Landscape — 2020-2030</strong>
-              <div style="color:var(--muted);font-size:13px;margin-top:4px">Started: June 2025 • Status: SSRN under review</div>
-            </div>
-            <div style="display:flex;gap:8px;align-items:center">
-              <a class="btn" id="downloadBtn" href="https://raw.githubusercontent.com/akshatgupta2000/akshatgupta2000.github.io/main/Research%20Thesis.pdf" target="_blank" download>Download PDF</a>
-              <a class="btn secondary" href="https://github.com/akshatgupta2000/Cross-Market-Corporate-Analysis-2020-2030" target="_blank">Repo</a>
-            </div>
-          </div>
-
-          <div class="viewer-embed">
-            <!-- Embedded PDF from your published raw URL. If your PDF is in a different repo/path, change PDF_URL below. -->
-            <iframe id="pdfFrame" title="Thesis PDF" src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/akshatgupta2000/akshatgupta2000.github.io/main/Research%20Thesis.pdf&embedded=true"></iframe>
-            <!-- NOTE: Google Docs viewer used for better cross-browser embedding. If you prefer direct raw PDF use the raw URL directly but some browsers block raw GitHub files. -->
-          </div>
-          <div style="padding:12px;border-top:1px solid rgba(255,255,255,0.02);display:flex;justify-content:space-between;align-items:center">
-            <div style="color:var(--muted);font-size:13px">File: Research Thesis (PDF) • Pages: 260 (full report)</div>
-            <div style="display:flex;gap:8px">
-              <a class="small" href="mailto:akshatgupta13427@gmail.com">Email</a>
-              <a class="small" href="https://www.linkedin.com/in/akshat-gupta-2100ag" target="_blank">LinkedIn</a>
-            </div>
-          </div>
+      <!-- Right: Embedded PDF viewer -->
+      <div>
+        <div class="card viewer">
+          <!-- If the browser blocks inline PDF viewing, the 'View / Download' button above still works -->
+          <iframe src="Research Thesis.pdf#toolbar=1&view=FitH" title="Research Thesis PDF preview"></iframe>
         </div>
 
-        <div style="margin-top:14px" class="panel">
-          <h4 style="margin:0 0 8px">Quick Metrics</h4>
-          <div style="display:flex;gap:8px;flex-wrap:wrap">
-            <div class="badge">Repo: Cross-Market-Corporate-Analysis-2020-2030</div>
-            <div class="badge">Models Repo: Cross-Market-Financial-Models-2020-2030</div>
-            <div class="badge">SSRN: Under Review</div>
-            <div class="badge">Author: Akshat Gupta</div>
-          </div>
+        <div style="display:flex;gap:10px;margin-top:12px">
+          <a class="btn" href="/Research Thesis.pdf" target="_blank" rel="noopener">Open full PDF</a>
+          <a class="btn ghost" href="https://github.com/akshatgupta2000" target="_blank">View GitHub</a>
         </div>
+      </div>
+    </div>
 
-      </aside>
+    <div style="display:flex;gap:14px;margin-top:18px;flex-wrap:wrap">
+      <div class="card" style="flex:1;min-width:260px">
+        <div class="project-title">About the project</div>
+        <div class="muted">A compact summary and key takeaways can be published here for a quick read. The full PDF contains full sector writeups, models, worksheets and appendices.</div>
+        <div style="margin-top:12px" class="small">
+          <strong>Highlights:</strong>
+          <ul style="margin:8px 0 0 18px;color:var(--muted)">
+            <li>ROCE vs P/E mapped across 11 sectors (India & US)</li>
+            <li>Sector CAS (macro) that weighs GDP, interest rates, capex, ESG & commodity exposure</li>
+            <li>RAPI metric and clusters: Structural Leaders, Weak Links, Tactical Alpha, Value Builders</li>
+            <li>Excel models & Power BI dashboards available in the Financial Models repository</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" style="width:320px">
+        <div class="project-title">Contact</div>
+        <div class="muted">Email: <a href="mailto:akshatgupta13427@gmail.com" style="color:#bfeee1">akshatgupta13427@gmail.com</a></div>
+        <div class="muted" style="margin-top:8px">LinkedIn: <a href="https://www.linkedin.com/in/akshat-gupta-2100ag" style="color:#bfeee1">/in/akshat-gupta-2100ag</a></div>
+        <div style="margin-top:12px" class="small">License: MIT — feel free to reference the research with attribution. Full models available in the model repo.</div>
+      </div>
     </div>
 
     <footer>
-      © 2025 Akshat Gupta — Independent Researcher • Built with GitHub Pages • <span style="color:var(--muted)">Site generated</span>
+      © 2025 Akshat Gupta — Independent Researcher · Hosted on GitHub Pages
     </footer>
   </div>
 
   <script>
-    // theme toggle: keep it simple (switch to light)
-    const toggle = document.getElementById('toggleTheme');
-    toggle.addEventListener('click', ()=> {
-      const body = document.body;
-      if(body.style.filter === 'brightness(1.08)') {
-        body.style.filter = '';
-        toggle.textContent = 'Toggle Theme';
-      } else {
-        body.style.filter = 'brightness(1.08)'; // quick warm toggle
-        toggle.textContent = 'Toggle Theme (on)';
-      }
-    });
-
-    // PDF download button fallback: make sure link opens raw file
-    document.getElementById('downloadBtn').addEventListener('click', ()=>{
-      // default behavior uses href; this ensures cross-browser open
-    });
+    // Small JS: enhance thumbnails to open in new window/tab (already anchor does it), and handle fallback if iframe blocked.
+    (function(){
+      const iframe = document.querySelector('.viewer iframe');
+      iframe.addEventListener('load', ()=> {
+        // if the browser can't render PDF, nothing breaks — user can download it via button
+      });
+    })();
   </script>
 </body>
 </html>
