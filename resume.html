@@ -1,85 +1,91 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Resume — Akshat Gupta</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
+<body class="theme-b">
+  <header class="site-header">
+    <nav class="topnav">
+      <a class="navlink" href="about.html">About</a>
+      <a class="navlink" href="projects.html">Projects</a>
+      <a class="navlink" href="resume.html" aria-current="page">Resume</a>
+    </nav>
+  </header>
 
-<body>
+  <main class="container">
+    <h1 class="page-title">Resume</h1>
 
-<nav class="navbar">
-  <a href="about.html" class="nav-link">About</a>
-  <a href="projects.html" class="nav-link">Projects</a>
-  <a href="resume.html" class="nav-link active">Resume</a>
-</nav>
+    <section class="card">
+      <h2 class="card-title">About (snippet)</h2>
+      <p>I am an independent financial researcher and modeller who focuses on financial statement analysis, forecasting and sector-level valuation. My deliverables include reproducible Excel models, sector scorecards, and clear investment research writeups.</p>
+    </section>
 
-<section class="resume-container">
+    <section class="card">
+      <h2 class="card-title">Education</h2>
+      <ol class="timeline">
+        <li>
+          <strong>Master / University (if applicable)</strong>
+          <span class="muted">Year — Year</span>
+          <p class="muted">[Placeholders: update from CV]</p>
+        </li>
+        <li>
+          <strong>Bachelor / College</strong>
+          <span class="muted">Year — Year</span>
+          <p class="muted">[Placeholders: update from CV]</p>
+        </li>
+      </ol>
+    </section>
 
-  <h1 class="page-title">Resume</h1>
+    <section class="card">
+      <h2 class="card-title">Experience</h2>
+      <ol class="timeline">
+        <li>
+          <strong>Intern — (Company)</strong>
+          <span class="muted">Dates</span>
+          <p>Project: <em>"Study of Financial Statements using Ratio Analysis"</em> — performed ratio analysis, trend analysis, and produced an interpretative report and Excel models that summarised company performance.</p>
+        </li>
 
-  <!-- Education -->
-  <div class="timeline-block">
-    <h2>Education</h2>
+        <li>
+          <strong>Independent Researcher</strong>
+          <span class="muted">2025 — Present</span>
+          <p>Conduct cross-market valuation research, build models and produce sector scorecards and dashboards.</p>
+        </li>
+      </ol>
+    </section>
 
-    <div class="timeline-item">
-      <h3>MBA — Finance</h3>
-      <p class="timeline-date">2023 – 2025</p>
-      <p>Guru Gobind Singh Indraprastha University (GGSIPU)</p>
-    </div>
+    <section class="card">
+      <h2 class="card-title">Skills (percentage)</h2>
+      <div class="skill">
+        <div class="skill-head"><span>Microsoft Excel</span><span>90%</span></div>
+        <div class="skill-bar"><div style="width:90%"></div></div>
+      </div>
 
-    <div class="timeline-item">
-      <h3>BBA — Finance</h3>
-      <p class="timeline-date">2020 – 2023</p>
-      <p>J.C. Bose University of Science & Technology</p>
-    </div>
-  </div>
+      <div class="skill">
+        <div class="skill-head"><span>Power BI</span><span>90%</span></div>
+        <div class="skill-bar"><div style="width:90%"></div></div>
+      </div>
 
-  <!-- Experience -->
-  <div class="timeline-block">
-    <h2>Internship Experience</h2>
+      <div class="skill">
+        <div class="skill-head"><span>MySQL</span><span>75%</span></div>
+        <div class="skill-bar"><div style="width:75%"></div></div>
+      </div>
 
-    <div class="timeline-item">
-      <h3>Financial Statements Analysis Intern — Grow Well Industries</h3>
-      <p class="timeline-date">Apr 2024 – Jun 2024</p>
-      <p>
-        Conducted a structured analysis of financial statements using ratio analysis,  
-        focusing on profitability, liquidity, leverage, and efficiency KPIs.  
-        Prepared comparative performance summaries, validated financial data,  
-        and built formatted reporting templates for periodic assessment.
-      </p>
-    </div>
+      <div class="skill">
+        <div class="skill-head"><span>SAP Fiori / S/4 HANA</span><span>50%</span></div>
+        <div class="skill-bar"><div style="width:50%"></div></div>
+      </div>
+    </section>
 
-  </div>
+    <section class="card">
+      <h2 class="card-title">Publications & Thesis</h2>
+      <p><strong>Decoding India & US — Cross-Sector Corporate Analysis (2020–2030)</strong> — detailed thesis (SSRN status: under review). The thesis PDF is available in the Projects page.</p>
+      <a class="btn" href="assets/files/Research Thesis.pdf" target="_blank">Open Thesis (PDF)</a>
+    </section>
+  </main>
 
-  <!-- Skills -->
-  <div class="skills-section">
-    <h2>Skills</h2>
-
-    <div class="skill-bar">
-      <span>Microsoft Excel</span>
-      <div class="bar"><div class="fill" style="width: 90%;"></div></div>
-    </div>
-
-    <div class="skill-bar">
-      <span>Power BI</span>
-      <div class="bar"><div class="fill" style="width: 90%;"></div></div>
-    </div>
-
-    <div class="skill-bar">
-      <span>MySQL</span>
-      <div class="bar"><div class="fill" style="width: 75%;"></div></div>
-    </div>
-
-    <div class="skill-bar">
-      <span>SAP S/4 HANA (Fiori)</span>
-      <div class="bar"><div class="fill" style="width: 50%;"></div></div>
-    </div>
-
-  </div>
-
-</section>
-
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
