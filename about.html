@@ -5,25 +5,55 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Akshat Gupta — About</title>
   <link rel="stylesheet" href="ASSETS/css/style.css">
+  <style>
+    /* Minimal page-level overrides to ensure dark theme & accent color if your CSS missing them */
+    :root { --bg:#0F1115; --card:#1E1E22; --text:#FFFFFF; --muted:#9CA3AF; --accent:#00A3FF; }
+    body.theme-dark { background: var(--bg); color: var(--text); font-family: Inter, Poppins, system-ui, Arial; margin:0; padding:0; }
+    .topnav { display:flex; gap:18px; padding:18px 28px; background:transparent; align-items:center; border-bottom:1px solid rgba(255,255,255,0.04); }
+    .nav-link { color:var(--muted); text-decoration:none; font-weight:600; padding:8px 12px; border-radius:6px; }
+    .nav-link.active { color:var(--accent); background: rgba(0,163,255,0.06); }
+    .container { max-width:960px; margin:36px auto; padding:0 20px; }
+    .card.profile-card { display:flex; gap:22px; background:var(--card); border-radius:12px; padding:22px; align-items:center; box-shadow: 0 6px 18px rgba(0,0,0,0.6); }
+    .profile-left { flex:0 0 140px; }
+    .avatar { width:140px; height:140px; object-fit:cover; border-radius:8px; border:2px solid rgba(255,255,255,0.04); }
+    .profile-right { flex:1; }
+    .name { margin:0; font-size:1.6rem; color:var(--text); }
+    .role { margin:6px 0 0; color:var(--muted); font-weight:600; }
+    .location { margin:6px 0 14px; color:var(--muted); font-size:0.95rem; }
+    .about-text p { margin:0 0 10px 0; line-height:1.55; color:#e6eef9; }
+    .contacts { display:flex; gap:12px; margin-top:14px; align-items:center; }
+    .icon-link { display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:8px; background:transparent; border:1px solid rgba(255,255,255,0.03); }
+    .icon-link img { width:20px; height:20px; display:block; filter: invert(94%) sepia(7%) saturate(0%) hue-rotate(177deg) brightness(100%) contrast(101%); }
+    .contact-list { margin-top:18px; display:flex; flex-direction:column; gap:8px; color:var(--muted); font-size:0.98rem; }
+    .contact-list a { color:var(--accent); text-decoration:none; font-weight:600; margin-left:8px; }
+    .site-footer { margin-top:28px; color:var(--muted); text-align:center; font-size:0.9rem; padding:24px 0; }
+    /* small responsive */
+    @media (max-width:700px){
+      .card.profile-card { flex-direction:column; align-items:flex-start; }
+      .profile-left { width:100%; display:flex; justify-content:center; }
+      .avatar { width:120px; height:120px; }
+    }
+  </style>
 </head>
 <body class="theme-dark">
-  <nav class="topnav">
+  <nav class="topnav" aria-label="Primary navigation">
     <a href="about.html" class="nav-link active">About</a>
     <a href="projects.html" class="nav-link">Projects</a>
     <a href="resume.html" class="nav-link">Resume</a>
   </nav>
 
-  <main class="container">
-    <section class="card profile-card">
+  <main class="container" role="main">
+    <section class="card profile-card" aria-labelledby="profile-heading">
       <div class="profile-left">
         <img src="ASSETS/Images/My-Photo.png" alt="Akshat Gupta" class="avatar">
       </div>
-      <div class="profile-right">
-        <h1 class="name">Akshat Gupta</h1>
-        <p class="role">Independent Researcher</p>
-        <p class="location">Faridabad, Haryana</p>
 
-        <!-- About text pulled from your CV (concise, accurate) -->
+      <div class="profile-right">
+        <h1 id="profile-heading" class="name">Akshat Gupta</h1>
+        <div class="role">Independent Researcher</div>
+        <div class="location">Faridabad, Haryana</div>
+
+        <!-- About text pulled from your CV -->
         <div class="about-text">
           <p>
             MBA (Finance) graduate with a strong foundation in investment research, valuation, and financial modelling.
@@ -32,30 +62,35 @@
           </p>
         </div>
 
-        <!-- Contact icons (small inline SVG icons, no raw links shown) -->
-        <div class="contacts">
-          <a class="icon-link" href="mailto:akshatgupta13427@gmail.com" title="Email">
-            <!-- Mail icon (outline) -->
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
-              <path d="M3 6.5v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-11" stroke="#00A3FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M22 6.5l-10 7L2 6.5" stroke="#00A3FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+        <!-- Contact icons using your uploaded images -->
+        <div class="contacts" aria-label="Contact links">
+          <a class="icon-link" href="mailto:akshatgupta13427@gmail.com" title="Email" aria-label="Email">
+            <img src="ASSETS/icons/email.webp" alt="Email icon">
           </a>
 
-          <a class="icon-link" href="https://github.com/akshatgupta2000" target="_blank" title="GitHub">
-            <!-- GitHub icon (outline) -->
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
-              <path d="M12 2C7.58 2 4 5.58 4 10c0 3.54 2.29 6.53 5.47 7.58.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.22 2.2.82A7.59 7.59 0 0 1 12 6.8c.68.003 1.36.092 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8.01 8.01 0 0 0 20 10c0-4.42-3.58-8-8-8z" stroke="#00A3FF" stroke-width="0.8"/>
-            </svg>
+          <a class="icon-link" href="https://github.com/akshatgupta2000" title="GitHub" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <img src="ASSETS/icons/github.png" alt="GitHub icon">
           </a>
 
-          <a class="icon-link" href="https://www.linkedin.com/in/akshat-gupta-2100ag" target="_blank" title="LinkedIn">
-            <!-- LinkedIn icon (outline) -->
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden>
-              <rect x="2" y="3" width="20" height="18" rx="2" stroke="#00A3FF" stroke-width="1.5"/>
-              <path d="M6 9.5v7M9 9.5v7M9 6.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM16 13v3" stroke="#00A3FF" stroke-width="1.4" stroke-linecap="round"/>
-            </svg>
+          <a class="icon-link" href="https://www.linkedin.com/in/akshat-gupta-2100ag" title="LinkedIn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <img src="ASSETS/icons/linkedin.png" alt="LinkedIn icon">
           </a>
+        </div>
+
+        <!-- Additional contact lines (email + links shown as small list) -->
+        <div class="contact-list" aria-label="Contact details">
+          <div>
+            <strong>Email:</strong>
+            <a href="mailto:akshatgupta13427@gmail.com">akshatgupta13427@gmail.com</a>
+          </div>
+          <div>
+            <strong>LinkedIn:</strong>
+            <a href="https://www.linkedin.com/in/akshat-gupta-2100ag" target="_blank" rel="noopener noreferrer">linkedin.com/in/akshat-gupta-2100ag</a>
+          </div>
+          <div>
+            <strong>GitHub:</strong>
+            <a href="https://github.com/akshatgupta2000" target="_blank" rel="noopener noreferrer">github.com/akshatgupta2000</a>
+          </div>
         </div>
 
       </div>
