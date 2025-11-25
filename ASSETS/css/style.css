@@ -1,173 +1,125 @@
-/* ASSETS/css/style.css
-   Dark theme (B): background #0F1115, white text, blue accents
-*/
-
-:root{
-  --bg: #0F1115;
-  --panel: #16181b;     /* slightly lighter than background */
-  --muted: #9aa3ad;
-  --text: #FFFFFF;
-  --accent: #00A3FF;    /* blue accent you asked for */
-  --card-radius: 12px;
-  --gap: 20px;
-  --maxwidth: 1100px;
-  --container-padding: 28px;
-  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+/* -------------- BASE -------------- */
+body {
+  background: #121212;
+  font-family: "Poppins", Arial, sans-serif;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
 }
 
-/* Reset-ish */
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  background:var(--bg);
-  color:var(--text);
-  font-size:16px;
-  line-height:1.5;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+.container-two-column {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+  padding: 40px;
 }
 
-/* Container */
-.container{
-  width:100%;
-  max-width:var(--maxwidth);
-  margin:24px auto;
-  padding:0 var(--container-padding);
+/* -------------- CARDS -------------- */
+.card {
+  background: #1E1E1E;
+  padding: 30px;
+  border-radius: 12px;
 }
 
-/* header */
-.site-header{
-  border-bottom:1px solid rgba(255,255,255,0.03);
-  padding:12px 0;
-}
-.header-inner{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-.brand .brand-name{
-  margin:0;
-  font-size:20px;
-  letter-spacing:0.2px;
-  font-weight:600;
-}
-.brand .brand-role{
-  margin:2px 0 0;
-  color:var(--muted);
-  font-size:13px;
+/* -------------- LEFT PANEL -------------- */
+.avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
-/* topnav - simple pill style */
-.topnav{
-  display:flex;
-  gap:12px;
-}
-.topnav .nav-link{
-  color:var(--muted);
-  text-decoration:none;
-  padding:8px 12px;
-  border-radius:10px;
-  font-weight:600;
-  font-size:14px;
-}
-.topnav .nav-link.active{
-  background:linear-gradient(90deg, rgba(0,163,255,0.12), rgba(0,163,255,0.06));
-  color:var(--accent);
-  box-shadow: 0 1px 0 rgba(0,0,0,0.3) inset;
+.title-main {
+  font-size: 32px;
+  margin: 0;
 }
 
-/* layout grid */
-.main-grid{
-  display:grid;
-  grid-template-columns: 320px 1fr;
-  gap:var(--gap);
-  margin-top:18px;
+.subtitle {
+  font-size: 18px;
+  margin: 5px 0 20px 0;
+  color: #00A3FF;
 }
 
-/* panels/cards */
-.panel{
-  background:var(--panel);
-  border-radius:var(--card-radius);
-  padding:18px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.45);
+.about-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #dddddd;
 }
 
-/* Profile panel specifics */
-.profile-panel{
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-  align-items:center;
-  text-align:center;
+/* -------------- CONTACT BOXES -------------- */
+.contact-boxes {
+  margin-top: 25px;
+  display: grid;
+  gap: 12px;
+  width: 80%;
 }
 
-.avatar-wrap{width:120px;height:120px;border-radius:14px;overflow:hidden;background:rgba(255,255,255,0.02)}
-.avatar{width:100%;height:100%;object-fit:cover;display:block}
-
-.name{margin:8px 0 0;font-size:20px;font-weight:700}
-.subrole{margin:6px 0 0;color:var(--muted)}
-.location{margin:6px 0 12px;color:var(--muted);font-size:13px}
-
-/* sections */
-.section-title{
-  margin:12px 0 8px;
-  font-size:13px;
-  color:var(--muted);
-  text-transform:uppercase;
-  letter-spacing:0.8px;
+.contact-btn {
+  padding: 10px 14px;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid transparent;
 }
 
-.about-text{color:rgba(255,255,255,0.92);font-size:14px;text-align:left}
-
-/* contact list */
-.contact-list{display:flex;flex-direction:column;gap:10px;margin-top:6px}
-.contact-row{display:flex;gap:10px;align-items:center;justify-content:flex-start}
-.icon-small{width:20px;height:20px;object-fit:contain;opacity:0.96}
-.contact-link{color:var(--text);text-decoration:none;font-weight:600}
-.contact-link:hover{text-decoration:underline;color:var(--accent)}
-
-/* skills */
-.skills{width:100%;margin-top:8px;text-align:left}
-.skill{margin-bottom:12px}
-.skill-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
-.skill-name{font-weight:600}
-.skill-percent{color:var(--muted);font-size:13px}
-.skill-bar{background:rgba(255,255,255,0.06);height:10px;border-radius:8px;overflow:hidden}
-.skill-fill{height:100%;background:linear-gradient(90deg,var(--accent), #287ff2);border-radius:8px}
-
-/* Projects panel specifics */
-.projects-panel{display:flex;flex-direction:column;gap:14px}
-.panel-header{display:flex;flex-direction:column;gap:10px}
-.panel-title{margin:0;font-size:18px;font-weight:700}
-
-.thesis-card{
-  display:flex;justify-content:space-between;align-items:center;
-  background:rgba(255,255,255,0.02);padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)
+/* Colors */
+.linkedin {
+  background: #0A66C2;
+  border-color: #0A66C2;
 }
-.thesis-left strong{display:block}
-.thin-muted{color:var(--muted);font-size:13px;margin-top:4px}
-.btn{display:inline-block;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:700}
-.btn-outline{border:1px solid rgba(0,163,255,0.18);color:var(--accent);background:transparent}
 
-/* projects list */
-.projects-list{display:flex;flex-direction:column;gap:12px;margin-top:6px}
-.project-card{display:flex;gap:12px;border-radius:10px;padding:12px;background:rgba(255,255,255,0.02);align-items:flex-start}
-.project-icon img{width:52px;height:52px;object-fit:contain}
-.project-body{flex:1}
-.project-title{margin:0;font-size:16px;font-weight:700}
-.project-desc{color:var(--muted);margin:6px 0;font-size:14px}
-.project-meta{margin-top:8px}
-.project-link{color:var(--accent);text-decoration:none;font-weight:700}
+.github {
+  background: #6e40c9;
+  border-color: #6e40c9;
+}
 
-/* footer */
-.panel-footer{margin-top:12px;color:var(--muted);font-size:13px}
-.site-footer{text-align:center;color:var(--muted);padding:22px 0;margin-top:18px;border-top:1px solid rgba(255,255,255,0.02)}
+.email {
+  background: #d93025;
+  border-color: #d93025;
+}
 
-/* small screens */
-@media (max-width:900px){
-  .main-grid{grid-template-columns:1fr; padding-top:0}
-  .profile-panel{flex-direction:row;align-items:flex-start;text-align:left;gap:16px}
-  .avatar-wrap{width:88px;height:88px}
-  .skills{order:3}
+/* -------------- RIGHT PANEL -------------- */
+.section-title {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.project-card {
+  background: #262626;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.project-title {
+  margin: 0 0 5px 0;
+  font-size: 20px;
+  color: #00A3FF;
+}
+
+.project-desc {
+  font-size: 14px;
+  color: #cccccc;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.repo-link,
+.view-thesis-btn {
+  background: #00A3FF;
+  color: #000;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.status {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #999999;
 }
