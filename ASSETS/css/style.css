@@ -46,23 +46,43 @@ body {
   color: #dddddd;
 }
 
-/* -------------- CONTACT BOXES -------------- */
+/* CONTACT BUTTONS — SMALLER & CLEAN */
 .contact-boxes {
-  margin-top: 25px;
-  display: grid;
-  gap: 12px;
-  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
 }
 
+/* Smaller button */
 .contact-btn {
-  padding: 10px 14px;
-  border-radius: 6px;
-  color: white;
-  font-weight: 600;
   display: inline-block;
+  padding: 6px 14px;      /* ← smaller height + width */
+  font-size: 14px;        /* ← smaller text */
+  font-weight: 500;
+  border-radius: 8px;
   text-align: center;
+  color: #fff;
   text-decoration: none;
-  border: 2px solid transparent;
+  width: 140px;           /* ← FIXED SMALL WIDTH */
+}
+
+/* Individual colors */
+.contact-btn.linkedin {
+  background: #0A66C2;     /* LinkedIn blue */
+}
+
+.contact-btn.github {
+  background: #6f42c1;     /* GitHub violet */
+}
+
+.contact-btn.email {
+  background: #d43f2f;     /* Email red */
+}
+
+/* On hover (small glow, not heavy) */
+.contact-btn:hover {
+  opacity: 0.85;
 }
 
 /* Colors */
