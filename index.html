@@ -2,102 +2,199 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Akshat Gupta — Portfolio</title>
-  <link rel="stylesheet" href="ASSETS/css/style.css">
-</head>
 
+  <!-- keep your main stylesheet if you have one -->
+  <link rel="stylesheet" href="ASSETS/css/style.css">
+
+  <!-- small page-specific styles to ensure contacts + skills render exactly as requested -->
+  <style>
+    :root{
+      --bg:#0F1115;         /* dark page background */
+      --card:#191B1E;       /* slightly lighter card */
+      --muted:#A6A9AD;      /* light grey text */
+      --accent:#00A3FF;     /* accent (used for bars) */
+      --link-blue:#1976D2;  /* linkedin box */
+      --github-violet:#7C4DFF;
+      --email-red:#E04F3D;
+      --card-radius:12px;
+      --pad:22px;
+      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    html,body{height:100%;margin:0;background:var(--bg);color:#fff;}
+    .container-two-column{
+      max-width:1120px;
+      margin:32px auto;
+      display:grid;
+      grid-template-columns:360px 1fr;
+      gap:28px;
+      padding:0 18px;
+      box-sizing:border-box;
+    }
+
+    /* PANELS / CARDS */
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--card-radius);
+      padding:24px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+      border:1px solid rgba(255,255,255,0.03);
+    }
+
+    /* LEFT PANEL (ABOUT) */
+    .left-panel{
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+      align-items:flex-start;
+    }
+
+    .left-panel .avatar{
+      width:110px;height:110px;border-radius:14px;object-fit:cover;border:2px solid rgba(255,255,255,0.06);
+    }
+
+    .title-main{font-size:24px;margin:6px 0 0 0;letter-spacing:0.2px}
+    .subtitle{color:var(--muted);margin:0 0 8px 0;font-weight:500}
+    .about-text{color:var(--muted);line-height:1.5;font-size:14px;margin:6px 0 12px 0}
+
+    /* CONTACT BOXES (small) */
+    .contact-boxes{width:100%;display:flex;flex-direction:column;gap:10px;margin-top:6px}
+    .contact-btn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:10px;
+      font-weight:700;
+      color:#fff;
+      text-decoration:none;
+      font-size:15px;
+      text-align:center;
+      border:1px solid rgba(255,255,255,0.04);
+      box-shadow:0 2px 8px rgba(0,0,0,0.45);
+      width:100%;
+    }
+    .contact-btn.linkedin{background:var(--link-blue)}
+    .contact-btn.github{background:var(--github-violet)}
+    .contact-btn.email{background:var(--email-red)}
+
+    /* RIGHT PANEL (Projects + Thesis) */
+    .right-panel{display:flex;flex-direction:column;gap:18px}
+    .section-title{font-size:20px;margin:0 0 6px 0}
+    .project-card{background:rgba(0,0,0,0.15);padding:16px;border-radius:10px}
+    .project-title{margin:0;font-size:16px}
+    .project-desc{color:var(--muted);font-size:14px;margin:8px 0}
+    .view-thesis-btn{
+      display:inline-block;padding:8px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);
+      background:transparent;color:var(--accent);text-decoration:none;font-weight:600;margin-top:6px;
+    }
+    .status{font-size:13px;color:var(--muted);margin-top:8px}
+
+    /* SKILLS - block under contacts (left column) */
+    .skills-card{margin-top:12px;background:rgba(0,0,0,0.06);padding:14px;border-radius:10px;width:100%}
+    .skills-card h3{margin:0 0 10px 0;font-size:16px}
+    .skill-row{display:flex;align-items:center;gap:12px;margin:12px 0}
+    .skill-name{width:38%;color:#e8e9ea;font-weight:600;font-size:14px}
+    .skill-bar-wrap{width:62%;background:rgba(255,255,255,0.05);height:10px;border-radius:8px;position:relative;overflow:hidden}
+    .skill-bar{
+      height:100%;
+      border-radius:8px 0 0 8px;
+      background:linear-gradient(90deg,var(--accent), #2ec4ff);
+      width:0%;
+      transition:width 700ms ease;
+    }
+    .skill-percent{font-size:13px;color:var(--muted);margin-left:8px;min-width:36px;text-align:right}
+
+    /* small screens */
+    @media (max-width:880px){
+      .container-two-column{grid-template-columns:1fr; padding:18px;}
+      .left-panel{flex-direction:row;align-items:center;gap:14px}
+      .left-panel .avatar{width:84px;height:84px}
+      .title-main{font-size:20px}
+      .contact-boxes{flex-direction:row;gap:8px}
+      .contact-btn{padding:8px 10px;font-size:13px;width:auto;}
+    }
+
+  </style>
+</head>
 <body class="theme-dark">
 
-  <!-- MAIN CONTAINER -->
   <main class="container-two-column">
 
-    <!-- LEFT COLUMN — ABOUT SECTION -->
+    <!-- LEFT COLUMN — ABOUT + CONTACTS + SKILLS -->
     <section class="left-panel card">
-
       <img src="ASSETS/Images/My-Photo.png" alt="Akshat Gupta" class="avatar">
 
-      <h1 class="title-main">Akshat Gupta</h1>
-      <p class="subtitle">Independent Researcher</p>
+      <div>
+        <div class="title-main">Akshat Gupta</div>
+        <div class="subtitle">Independent Researcher</div>
+      </div>
 
       <p class="about-text">
         MBA (Finance) graduate with a strong foundation in investment research,
         valuation, and financial modelling. Skilled in DCF, RIM, ROCE-based
         valuation, forecasting, and dashboard creation. I author research-driven
-        reports and build reproducible Excel models and visual frameworks to
+        reports and create reproducible Excel models and visual frameworks to
         support decision-making.
       </p>
 
-      <!-- CONTACT BOXES (SMALLER NOW) -->
-      <div class="contact-boxes smaller">
-
-        <a class="contact-btn linkedin" 
-           href="https://www.linkedin.com/in/akshat-gupta-2100ag" 
-           target="_blank">
-          LinkedIn
-        </a>
-
-        <a class="contact-btn github" 
-           href="https://github.com/akshatgupta2000" 
-           target="_blank">
-          GitHub
-        </a>
-
-        <a class="contact-btn email" 
-           href="mailto:akshatgupta13427@gmail.com">
-          Email
-        </a>
-
+      <!-- CONTACT BOXES (small) -->
+      <div class="contact-boxes" aria-label="Contact">
+        <a class="contact-btn linkedin" href="https://www.linkedin.com/in/akshat-gupta-2100ag" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="contact-btn github" href="https://github.com/akshatgupta2000" target="_blank" rel="noopener">GitHub</a>
+        <a class="contact-btn email" href="mailto:akshatgupta1397@gmail.com">Email</a>
       </div>
 
-      <!-- SKILLS SECTION -->
-      <h2 class="skills-title">Skills</h2>
+      <!-- SKILLS -->
+      <div class="skills-card" aria-label="Skills">
+        <h3>Skills</h3>
 
-      <div class="skill-bar">
-        <span>Microsoft Excel — 95%</span>
-        <div class="bar"><div class="fill excel"></div></div>
+        <div class="skill-row">
+          <div class="skill-name">Microsoft Excel</div>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-pct="95"></div></div>
+          <div class="skill-percent">95%</div>
+        </div>
+
+        <div class="skill-row">
+          <div class="skill-name">Power BI</div>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-pct="95"></div></div>
+          <div class="skill-percent">95%</div>
+        </div>
+
+        <div class="skill-row">
+          <div class="skill-name">MySQL</div>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-pct="70"></div></div>
+          <div class="skill-percent">70%</div>
+        </div>
+
+        <div class="skill-row">
+          <div class="skill-name">Bloomberg Terminal</div>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-pct="50"></div></div>
+          <div class="skill-percent">50%</div>
+        </div>
+
+        <div class="skill-row">
+          <div class="skill-name">SAP S/4 HANA</div>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-pct="50"></div></div>
+          <div class="skill-percent">50%</div>
+        </div>
+
       </div>
-
-      <div class="skill-bar">
-        <span>Power BI — 95%</span>
-        <div class="bar"><div class="fill powerbi"></div></div>
-      </div>
-
-      <div class="skill-bar">
-        <span>MySQL — 70%</span>
-        <div class="bar"><div class="fill mysql"></div></div>
-      </div>
-
-      <div class="skill-bar">
-        <span>Bloomberg Terminal — 50%</span>
-        <div class="bar"><div class="fill bloomberg"></div></div>
-      </div>
-
-      <div class="skill-bar">
-        <span>SAP S/4 HANA — 50%</span>
-        <div class="bar"><div class="fill sap"></div></div>
-      </div>
-
     </section>
 
-    <!-- RIGHT COLUMN — PROJECTS SECTION -->
+    <!-- RIGHT COLUMN — PROJECTS -->
     <section class="right-panel card">
-
       <h2 class="section-title">Projects</h2>
 
       <!-- Thesis block -->
       <div class="project-card">
         <h3 class="project-title">Research Thesis</h3>
         <p class="project-desc">
-          “Decoding India & US Corporate Landscape: Cross-Sector Fundamentals 
-          and Outlook to 2030” — Independent multi-sector equity research study 
-          with valuation models, heatmaps, and forecasting frameworks.
+          “Decoding India & US Corporate Landscape: Cross-Sector Fundamentals and Outlook to 2030” —
+          Independent multi-sector equity research study with valuation models, heatmaps and financial forecasts.
         </p>
 
-        <a class="view-thesis-btn" href="Research-Thesis.pdf" target="_blank">
-          View Full Thesis (PDF)
-        </a>
-
+        <a class="view-thesis-btn" href="Research-Thesis.pdf" target="_blank" rel="noopener">View Full Thesis (PDF)</a>
         <p class="status">Status: SSRN — Under Review</p>
       </div>
 
@@ -105,36 +202,41 @@
       <div class="project-card">
         <h3 class="project-title">Cross-Market Corporate Analysis (2020–2030)</h3>
         <p class="project-desc">
-          Fundamental analysis across India and US sectors including valuation 
-          frameworks, financial modelling, risk assessment metrics, and 
-          comparative scorecards.
+          Fundamental cross-market analysis across India and the United States, including valuation frameworks,
+          ROCE-driven scorecards, and company-level write-ups supported by Excel models.
         </p>
 
-        <a class="repo-link"
-           href="https://github.com/akshatgupta2000/Cross-Market-Corporate-Analysis-2020-2030"
-           target="_blank">
-          View Repository
-        </a>
+        <a class="repo-link" href="https://github.com/akshatgupta2000/Cross-Market-Corporate-Analysis-2020-2030" target="_blank" rel="noopener">View Repository</a>
       </div>
 
       <!-- Repo 2 -->
       <div class="project-card">
         <h3 class="project-title">Cross-Market Financial Models (2020–2030)</h3>
         <p class="project-desc">
-          Excel-based ROCE–P/E models, risk-adjusted scorecards, heatmaps,
-          CAS frameworks, and multi-sector dashboards for India & US markets.
+          Consolidated Excel workbooks (ROCE↔P/E mapping, heatmaps, RAPI/CAS frameworks), spreadsheets for
+          cross-market comparatives and forecasting.
         </p>
 
-        <a class="repo-link"
-           href="https://github.com/akshatgupta2000/Cross-Market-Financial-Models-2020-2030"
-           target="_blank">
-          View Repository
-        </a>
+        <a class="repo-link" href="https://github.com/akshatgupta2000/Cross-Market-Financial-Models-2020-2030" target="_blank" rel="noopener">View Repository</a>
       </div>
 
     </section>
-
   </main>
+
+  <!-- Simple script to set skill bar widths on load -->
+  <script>
+    (function() {
+      document.querySelectorAll('.skill-bar').forEach(function(bar){
+        var pct = parseInt(bar.getAttribute('data-pct') || '0',10);
+        // Cap 0-100
+        if(isNaN(pct)) pct = 0;
+        if(pct < 0) pct = 0;
+        if(pct > 100) pct = 100;
+        // set width after short delay so transition animates
+        setTimeout(function(){ bar.style.width = pct + '%'; }, 150);
+      });
+    })();
+  </script>
 
 </body>
 </html>
