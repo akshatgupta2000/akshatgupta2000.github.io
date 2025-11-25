@@ -73,3 +73,17 @@ body.theme-dark{background:var(--bg);color:var(--text);font-family:Inter,system-
   .container{flex-direction:column;padding:16px}
   .profile-card{width:100%}
 }
+/* Contact icons – fixed size */
+.contact-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Prevent any contact icons from stretching */
+.contact-item img {
+  width: 28px !important;
+  height: 28px !important;
+}
