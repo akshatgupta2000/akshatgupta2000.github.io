@@ -1,201 +1,112 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Akshat Gupta — Profile & Projects</title>
-
-  <!-- Link to stylesheet (version param optional) -->
-  <link rel="stylesheet" href="ASSETS/css/style.css?v=2">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akshat Gupta — Portfolio</title>
+  <link rel="stylesheet" href="ASSETS/css/style.css">
 </head>
+
 <body class="theme-dark">
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <h1 class="brand-name">Akshat Gupta</h1>
-        <p class="brand-role">Independent Researcher</p>
+  <!-- MAIN CONTAINER -->
+  <main class="container-two-column">
+
+    <!-- LEFT COLUMN — ABOUT SECTION -->
+    <section class="left-panel card">
+
+      <img src="ASSETS/Images/My-Photo.png" alt="Akshat Gupta" class="avatar">
+
+      <h1 class="title-main">Akshat Gupta</h1>
+      <p class="subtitle">Independent Researcher</p>
+
+      <p class="about-text">
+        MBA (Finance) graduate with a strong foundation in investment research,
+        valuation, and financial modelling. Skilled in DCF, RIM, ROCE-based
+        valuation, forecasting, and dashboard creation. I author research-driven
+        reports and build reproducible Excel models and visual frameworks to
+        support decision-making.
+      </p>
+
+      <!-- CONTACT BOXES -->
+      <div class="contact-boxes">
+
+        <a class="contact-btn linkedin" 
+           href="https://www.linkedin.com/in/akshat-gupta-2100ag" 
+           target="_blank">
+          LinkedIn
+        </a>
+
+        <a class="contact-btn github" 
+           href="https://github.com/akshatgupta2000" 
+           target="_blank">
+          GitHub
+        </a>
+
+        <a class="contact-btn email" 
+           href="mailto:akshatgupta13427@gmail.com">
+          Email
+        </a>
+
       </div>
 
-      <nav class="topnav">
-        <a class="nav-link active">About</a>
-        <a class="nav-link">Projects</a>
-        <a class="nav-link">Resume</a>
-      </nav>
-    </div>
-  </header>
+    </section>
 
-  <main class="container main-grid">
+    <!-- RIGHT COLUMN — PROJECTS SECTION -->
+    <section class="right-panel card">
 
-    <!-- LEFT: About / Contact -->
-    <aside class="panel profile-panel">
+      <h2 class="section-title">Projects</h2>
 
-      <div class="avatar-wrap">
-        <img src="ASSETS/Images/My-Photo.png" alt="Akshat Gupta" class="avatar">
-      </div>
-
-      <h2 class="name">Akshat Gupta</h2>
-      <p class="subrole">MBA (Finance) · Independent Researcher</p>
-      <p class="location">Faridabad, Haryana</p>
-
-      <section class="about">
-        <h3 class="section-title">About</h3>
-        <p class="about-text">
-          MBA (Finance) graduate with a strong foundation in investment research, valuation, and financial modelling.
-          Skilled in DCF, RIM, ROCE-based valuation, forecasting, and dashboard creation. I author research-driven
-          reports and create reproducible Excel models and visual frameworks to support decision-making.
+      <!-- Thesis block -->
+      <div class="project-card">
+        <h3 class="project-title">Research Thesis</h3>
+        <p class="project-desc">
+          “Decoding India & US Corporate Landscape: Cross-Sector Fundamentals 
+          and Outlook to 2030” — Independent multi-sector equity research study 
+          with valuation models, heatmaps, and financial forecasting frameworks.
         </p>
-      </section>
 
-      <section class="contact">
-        <h3 class="section-title">Contact</h3>
+        <a class="view-thesis-btn" href="Research Thesis.pdf" target="_blank">
+          View Full Thesis (PDF)
+        </a>
 
-        <div class="contact-list">
-          <div class="contact-row">
-            <img src="ASSETS/icons/email.png" alt="Email" class="icon-small">
-            <a href="mailto:akshatgupta1397@gmail.com" class="contact-link">akshatgupta1397@gmail.com</a>
-          </div>
-
-          <div class="contact-row">
-            <img src="ASSETS/icons/linkedin.png" alt="LinkedIn" class="icon-small">
-            <a href="https://www.linkedin.com/in/akshat-gupta-2100ag" target="_blank" rel="noopener" class="contact-link">LinkedIn</a>
-          </div>
-
-          <div class="contact-row">
-            <img src="ASSETS/icons/github.png" alt="GitHub" class="icon-small">
-            <a href="https://github.com/akshatgupta2000" target="_blank" rel="noopener" class="contact-link">GitHub</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="skills">
-        <h3 class="section-title">Skills</h3>
-
-        <div class="skill">
-          <div class="skill-row">
-            <span class="skill-name">Excel</span>
-            <span class="skill-percent">95%</span>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-fill" style="width:95%"></div>
-          </div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-row">
-            <span class="skill-name">Power BI</span>
-            <span class="skill-percent">95%</span>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-fill" style="width:95%"></div>
-          </div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-row">
-            <span class="skill-name">MySQL</span>
-            <span class="skill-percent">70%</span>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-fill" style="width:70%"></div>
-          </div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-row">
-            <span class="skill-name">Bloomberg Terminal</span>
-            <span class="skill-percent">50%</span>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-fill" style="width:50%"></div>
-          </div>
-        </div>
-
-        <div class="skill">
-          <div class="skill-row">
-            <span class="skill-name">SAP S/4 HANA</span>
-            <span class="skill-percent">50%</span>
-          </div>
-          <div class="skill-bar">
-            <div class="skill-fill" style="width:50%"></div>
-          </div>
-        </div>
-
-      </section>
-
-    </aside>
-
-
-    <!-- RIGHT: Projects -->
-    <section class="panel projects-panel">
-
-      <div class="panel-header">
-        <h3 class="panel-title">Projects & Research</h3>
-
-        <div class="thesis-card">
-          <div class="thesis-left">
-            <strong>Research Thesis</strong>
-            <div class="thin-muted">Decoding India & US: Cross-Market Corporate Analysis (2020–2030)</div>
-          </div>
-          <div class="thesis-right">
-            <a class="btn btn-outline" href="/Research Thesis.pdf" target="_blank" rel="noopener">View Thesis (PDF)</a>
-          </div>
-        </div>
+        <p class="status">Status: SSRN — Under Review</p>
       </div>
 
-      <div class="projects-list">
+      <!-- Repo 1 -->
+      <div class="project-card">
+        <h3 class="project-title">Cross-Market Corporate Analysis (2020–2030)</h3>
+        <p class="project-desc">
+          Fundamental analysis across India and US sectors including valuation 
+          frameworks, financial modelling, risk assessment metrics, and 
+          comparative scorecards.
+        </p>
 
-        <!-- Corporate Analysis card -->
-        <article class="project-card">
-          <div class="project-icon">
-            <img src="ASSETS/icons/analysis.png" alt="Corporate Analysis" />
-          </div>
-
-          <div class="project-body">
-            <h4 class="project-title">Corporate Analysis (2020–2030)</h4>
-            <p class="project-desc">
-              Detailed sector-level fundamental analysis across India & the US using ROCE / P/E mapping, sector scorecards,
-              and company-level write-ups. Includes reproducible Excel models and sector dashboards for investment analysis.
-            </p>
-
-            <div class="project-meta">
-              <a class="project-link" href="https://github.com/akshatgupta2000/Cross-Market-Corporate-Analysis-2020-2030" target="_blank" rel="noopener">View on GitHub</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Financial Models card -->
-        <article class="project-card">
-          <div class="project-icon">
-            <img src="ASSETS/icons/model.png" alt="Financial Models" />
-          </div>
-
-          <div class="project-body">
-            <h4 class="project-title">Financial Models (2020–2030)</h4>
-            <p class="project-desc">
-              Consolidated Excel workbooks with ROCE-driven valuation models, RAPI & CAS scorecards, heatmaps, and
-              sector modelling outputs. Designed for reproducible valuation and scenario analysis.
-            </p>
-
-            <div class="project-meta">
-              <a class="project-link" href="https://github.com/akshatgupta2000/Cross-Market-Financial-Models-2020-2030" target="_blank" rel="noopener">View on GitHub</a>
-            </div>
-          </div>
-        </article>
-
+        <a class="repo-link"
+           href="https://github.com/akshatgupta2000/Cross-Market-Corporate-Analysis-2020-2030"
+           target="_blank">
+          View Repository
+        </a>
       </div>
 
-      <footer class="panel-footer">
-        <div class="small-muted">Status: SSRN — Under review • Started: June 2025</div>
-      </footer>
+      <!-- Repo 2 -->
+      <div class="project-card">
+        <h3 class="project-title">Cross-Market Financial Models (2020–2030)</h3>
+        <p class="project-desc">
+          Excel-based ROCE–P/E models, risk-adjusted scorecards, heatmaps,
+          CAS frameworks, and multi-sector dashboards for India & US markets.
+        </p>
+
+        <a class="repo-link"
+           href="https://github.com/akshatgupta2000/Cross-Market-Financial-Models-2020-2030"
+           target="_blank">
+          View Repository
+        </a>
+      </div>
 
     </section>
 
   </main>
-
-  <footer class="site-footer">
-    © 2025 Akshat Gupta — Independent Researcher
-  </footer>
 
 </body>
 </html>
